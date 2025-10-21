@@ -38,6 +38,63 @@ export const translations = {
       title: 'Ervaring',
       intro: 'Van student tot professionele ontwikkelaar - een tijdlijn van groei, leren en prestaties.',
       achievements: 'Belangrijkste Prestaties',
+      jobs: {
+        simcogroup: {
+          title: 'Full Stack Developer',
+          period: 'September 2024 - Heden',
+          location: 'België',
+          type: 'Fulltime',
+          description: 'Ontwikkelen van geavanceerde applicaties en webplatformen met moderne technologieën.',
+          achievements: [
+            'Ontwikkelde cross-platform mobiele apps voor Android en iOS met Tauri en React',
+            'Focus op gebruiksvriendelijke designs met duidelijke typografie en intuïtieve interfaces',
+            'Configureerde NGINX als webserver voor Laravel applicaties',
+            'Implementeerde NGINX als reverse proxy voor Next.js applicaties',
+            'Configureerde Cloudflare als DNS provider voor optimale beveiliging en prestaties',
+            'Bouwde schaalbare webplatformen met Next.js, Laravel en NestJS'
+          ]
+        },
+        techbirds: {
+          title: 'Software Development Stagiair',
+          period: 'April 2024 - Mei 2024',
+          location: 'België',
+          type: 'Stage',
+          description: 'Intensieve stage gericht op moderne ontwikkelpraktijken en teamcollaboratie.',
+          achievements: [
+            'Ontwikkelde essentiële soft skills waaronder communicatie en teamwerk',
+            'Bouwde applicaties met C#, TypeScript en Next.js',
+            'Leerde en paste scaffolding technieken toe voor efficiënte code generatie',
+            'Implementeerde CI/CD processen om ontwikkelworkflows te optimaliseren',
+            'Ervaring opgedaan met moderne ontwikkelmethodologieën'
+          ]
+        },
+        artevelde: {
+          title: 'Student - Graduaat Programmeren',
+          period: '2021 - 2024',
+          location: 'Gent, België',
+          type: 'Opleiding',
+          description: 'Uitgebreide programmeeropleiding gericht op moderne webontwikkeling.',
+          achievements: [
+            'Afgestudeerd met sterke basis in programmeerprincipes',
+            'Gespecialiseerd in webontwikkelingstechnologieën',
+            'Voltooide verschillende projecten met moderne frameworks',
+            'Ontwikkelde probleemoplossend en analytisch denkvermogen'
+          ]
+        },
+        spectrum: {
+          title: 'Student - Kantoor',
+          period: '2014 - 2021',
+          location: 'België',
+          type: 'Opleiding',
+          description: 'Secundair onderwijs met focus op kantooradministratie en vroege programmeerervaring.',
+          achievements: [
+            'Ontving stage-award voor het maken van innovatieve tools',
+            'Ontwikkelde tools die medestudenten hielpen tijdens stages',
+            'Erkend door professionals uit de industrie voor uitzonderlijk werk',
+            'Vroege demonstratie van programmeertalent en probleemoplossend vermogen'
+          ]
+        }
+      }
     },
     projects: {
       title: 'Geselecteerd Werk',
@@ -47,6 +104,52 @@ export const translations = {
       mobile: 'Mobiel',
       web: 'Web',
       tools: 'Tools',
+      items: {
+        crossPlatform: {
+          title: 'Cross-Platform Desktop & Mobiele Apps',
+          description: 'Ontwikkelde applicaties voor Windows, macOS, iOS en Android met Tauri en React met focus op gebruiksvriendelijk design en duidelijke typografie.',
+          features: [
+            'Windows, macOS, iOS & Android ondersteuning',
+            'Gebruiksvriendelijk interface design',
+            'Duidelijke typografie en toegankelijkheid',
+            'Native prestaties met webtechnologieën'
+          ],
+          status: 'Professioneel'
+        },
+        webPlatform: {
+          title: 'Webplatform Infrastructuur',
+          description: 'Bouwde schaalbare webplatformen met Next.js, Laravel en NestJS met NGINX configuratie en Cloudflare integratie.',
+          features: [
+            'NGINX webserver configuratie voor Laravel',
+            'Reverse proxy setup voor Next.js',
+            'Cloudflare DNS en beveiligingsoptimalisatie',
+            'Schaalbaar architectuurontwerp'
+          ],
+          status: 'Professioneel'
+        },
+        modernWeb: {
+          title: 'Moderne Webapplicaties',
+          description: 'Ontwikkelde applicaties met C#, TypeScript en Next.js met focus op moderne ontwikkelpraktijken en CI/CD.',
+          features: [
+            'Moderne scaffolding technieken',
+            'Geautomatiseerde CI/CD pipelines',
+            'Clean code architectuur',
+            'Team samenwerkingsworkflows'
+          ],
+          status: 'Stage'
+        },
+        studentTools: {
+          title: 'Student Tool Suite',
+          description: 'Creëerde innovatieve tools die medestudenten hielpen tijdens stages, met erkenning van professionals uit de industrie.',
+          features: [
+            'Student productiviteitsverbetering',
+            'Intuïtieve gebruikersinterface',
+            'Probleemoplossende automatisering',
+            'Peer samenwerkingsfuncties'
+          ],
+          status: 'Award Winnaar'
+        }
+      }
     },
     contact: {
       title: 'Neem Contact Op',
@@ -56,6 +159,18 @@ export const translations = {
       subject: 'Onderwerp',
       message: 'Je bericht',
       send: 'Verstuur Bericht',
+      emailTitle: 'Email',
+      emailValue: 'Laten we verbinden',
+      emailDesc: 'Ik reageer meestal binnen 24 uur',
+      githubTitle: 'GitHub',
+      githubValue: '@dionvanhecke',
+      githubDesc: 'Bekijk mijn laatste projecten',
+      linkedinTitle: 'LinkedIn',
+      linkedinValue: 'Professioneel Netwerk',
+      linkedinDesc: 'Laten we professioneel verbinden',
+      locationTitle: 'Locatie',
+      locationValue: 'België',
+      locationDesc: 'Open voor remote mogelijkheden',
     },
   },
   fr: {
@@ -97,6 +212,63 @@ export const translations = {
       title: 'Expérience',
       intro: 'D\'étudiant à développeur professionnel - une chronologie de croissance, d\'apprentissage et de réalisations.',
       achievements: 'Réalisations Clés',
+      jobs: {
+        simcogroup: {
+          title: 'Développeur Full Stack',
+          period: 'Septembre 2024 - Présent',
+          location: 'Belgique',
+          type: 'Temps plein',
+          description: 'Développement d\'applications de pointe et de plateformes web avec des technologies modernes.',
+          achievements: [
+            'Développé des applications mobiles multiplateformes pour Android et iOS avec Tauri et React',
+            'Concentré sur des designs conviviaux avec une typographie claire et des interfaces intuitives',
+            'Configuré NGINX comme serveur web pour les applications Laravel',
+            'Implémenté NGINX comme proxy inverse pour les applications Next.js',
+            'Configuré Cloudflare comme fournisseur DNS pour une sécurité et des performances optimales',
+            'Construit des plateformes web évolutives avec Next.js, Laravel et NestJS'
+          ]
+        },
+        techbirds: {
+          title: 'Stagiaire en Développement Logiciel',
+          period: 'Avril 2024 - Mai 2024',
+          location: 'Belgique',
+          type: 'Stage',
+          description: 'Stage intensif axé sur les pratiques de développement modernes et la collaboration en équipe.',
+          achievements: [
+            'Développé des compétences interpersonnelles essentielles, notamment la communication et le travail d\'équipe',
+            'Construit des applications avec C#, TypeScript et Next.js',
+            'Appris et appliqué des techniques de scaffolding pour une génération de code efficace',
+            'Implémenté des processus CI/CD pour optimiser les flux de travail de développement',
+            'Acquis de l\'expérience avec les méthodologies de développement modernes'
+          ]
+        },
+        artevelde: {
+          title: 'Étudiant - Graduaat Programmeren',
+          period: '2021 - 2024',
+          location: 'Gand, Belgique',
+          type: 'Éducation',
+          description: 'Formation complète en programmation axée sur le développement web moderne.',
+          achievements: [
+            'Diplômé avec une base solide en principes de programmation',
+            'Spécialisé dans les technologies de développement web',
+            'Complété divers projets utilisant des frameworks modernes',
+            'Développé des compétences en résolution de problèmes et en pensée analytique'
+          ]
+        },
+        spectrum: {
+          title: 'Étudiant - Kantoor',
+          period: '2014 - 2021',
+          location: 'Belgique',
+          type: 'Éducation',
+          description: 'Enseignement secondaire axé sur l\'administration de bureau et l\'exposition précoce à la programmation.',
+          achievements: [
+            'Reçu un prix de stage pour la création d\'outils innovants',
+            'Développé des outils qui ont aidé les camarades étudiants pendant les stages',
+            'Reconnu par des professionnels de l\'industrie pour un travail exceptionnel',
+            'Démonstration précoce d\'aptitudes en programmation et en résolution de problèmes'
+          ]
+        }
+      }
     },
     projects: {
       title: 'Travaux Sélectionnés',
@@ -106,6 +278,52 @@ export const translations = {
       mobile: 'Mobile',
       web: 'Web',
       tools: 'Outils',
+      items: {
+        crossPlatform: {
+          title: 'Applications Desktop & Mobile Multiplateformes',
+          description: 'Développé des applications pour Windows, macOS, iOS et Android avec Tauri et React en mettant l\'accent sur un design convivial et une typographie claire.',
+          features: [
+            'Support Windows, macOS, iOS & Android',
+            'Design d\'interface convivial',
+            'Typographie claire et accessibilité',
+            'Performances natives avec technologies web'
+          ],
+          status: 'Professionnel'
+        },
+        webPlatform: {
+          title: 'Infrastructure de Plateforme Web',
+          description: 'Construit des plateformes web évolutives avec Next.js, Laravel et NestJS avec configuration NGINX et intégration Cloudflare.',
+          features: [
+            'Configuration serveur web NGINX pour Laravel',
+            'Configuration proxy inverse pour Next.js',
+            'Optimisation DNS et sécurité Cloudflare',
+            'Conception d\'architecture évolutive'
+          ],
+          status: 'Professionnel'
+        },
+        modernWeb: {
+          title: 'Applications Web Modernes',
+          description: 'Développé des applications avec C#, TypeScript et Next.js en mettant l\'accent sur les pratiques de développement modernes et CI/CD.',
+          features: [
+            'Techniques de scaffolding modernes',
+            'Pipelines CI/CD automatisés',
+            'Architecture de code propre',
+            'Flux de travail de collaboration en équipe'
+          ],
+          status: 'Stage'
+        },
+        studentTools: {
+          title: 'Suite d\'Outils Étudiants',
+          description: 'Créé des outils innovants qui ont aidé les camarades étudiants pendant les stages, avec reconnaissance des professionnels de l\'industrie.',
+          features: [
+            'Amélioration de la productivité étudiante',
+            'Interface utilisateur intuitive',
+            'Automatisation de résolution de problèmes',
+            'Fonctionnalités de collaboration entre pairs'
+          ],
+          status: 'Lauréat'
+        }
+      }
     },
     contact: {
       title: 'Contactez-moi',
@@ -115,6 +333,18 @@ export const translations = {
       subject: 'Sujet',
       message: 'Votre message',
       send: 'Envoyer le Message',
+      emailTitle: 'Email',
+      emailValue: 'Connectons-nous',
+      emailDesc: 'Je réponds généralement dans les 24 heures',
+      githubTitle: 'GitHub',
+      githubValue: '@dionvanhecke',
+      githubDesc: 'Découvrez mes derniers projets',
+      linkedinTitle: 'LinkedIn',
+      linkedinValue: 'Réseau Professionnel',
+      linkedinDesc: 'Connectons-nous professionnellement',
+      locationTitle: 'Localisation',
+      locationValue: 'Belgique',
+      locationDesc: 'Ouvert aux opportunités à distance',
     },
   },
   en: {
@@ -156,6 +386,63 @@ export const translations = {
       title: 'Experience',
       intro: 'From student to professional developer - a timeline of growth, learning, and achievements.',
       achievements: 'Key Achievements',
+      jobs: {
+        simcogroup: {
+          title: 'Full Stack Developer',
+          period: 'September 2024 - Present',
+          location: 'Belgium',
+          type: 'Full-time',
+          description: 'Developing cutting-edge applications and web platforms with modern technologies.',
+          achievements: [
+            'Developed cross-platform mobile apps for Android and iOS using Tauri and React',
+            'Focused on user-friendly designs with clear typography and intuitive interfaces',
+            'Configured NGINX as webserver for Laravel applications',
+            'Implemented NGINX as reverse proxy for Next.js applications',
+            'Set up Cloudflare as DNS provider for optimal security and performance',
+            'Built scalable web platforms using Next.js, Laravel, and NestJS'
+          ]
+        },
+        techbirds: {
+          title: 'Software Development Intern',
+          period: 'April 2024 - May 2024',
+          location: 'Belgium',
+          type: 'Internship',
+          description: 'Intensive internship focused on modern development practices and team collaboration.',
+          achievements: [
+            'Developed essential soft skills including communication and teamwork',
+            'Built applications using C#, TypeScript, and Next.js',
+            'Learned and applied scaffolding techniques for efficient code generation',
+            'Implemented CI/CD processes to optimize development workflows',
+            'Gained experience with modern development methodologies'
+          ]
+        },
+        artevelde: {
+          title: 'Student - Graduaat Programmeren',
+          period: '2021 - 2024',
+          location: 'Ghent, Belgium',
+          type: 'Education',
+          description: 'Comprehensive programming education focusing on modern web development.',
+          achievements: [
+            'Graduated with strong foundation in programming principles',
+            'Specialized in web development technologies',
+            'Completed various projects using modern frameworks',
+            'Developed problem-solving and analytical thinking skills'
+          ]
+        },
+        spectrum: {
+          title: 'Student - Kantoor',
+          period: '2014 - 2021',
+          location: 'Belgium',
+          type: 'Education',
+          description: 'Secondary education with focus on office administration and early programming exposure.',
+          achievements: [
+            'Received internship award for creating innovative tools',
+            'Developed tools that helped fellow students during internships',
+            'Recognized by industry professionals for exceptional work',
+            'Early demonstration of programming aptitude and problem-solving skills'
+          ]
+        }
+      }
     },
     projects: {
       title: 'Selected Work',
@@ -165,6 +452,52 @@ export const translations = {
       mobile: 'Mobile',
       web: 'Web',
       tools: 'Tools',
+      items: {
+        crossPlatform: {
+          title: 'Cross-Platform Desktop & Mobile Apps',
+          description: 'Developed applications for Windows, macOS, iOS, and Android using Tauri and React with focus on user-friendly design and clear typography.',
+          features: [
+            'Windows, macOS, iOS & Android support',
+            'User-friendly interface design',
+            'Clear typography and accessibility',
+            'Native performance with web technologies'
+          ],
+          status: 'Professional'
+        },
+        webPlatform: {
+          title: 'Web Platform Infrastructure',
+          description: 'Built scalable web platforms using Next.js, Laravel, and NestJS with NGINX configuration and Cloudflare integration.',
+          features: [
+            'NGINX webserver configuration for Laravel',
+            'Reverse proxy setup for Next.js',
+            'Cloudflare DNS and security optimization',
+            'Scalable architecture design'
+          ],
+          status: 'Professional'
+        },
+        modernWeb: {
+          title: 'Modern Web Applications',
+          description: 'Developed applications using C#, TypeScript, and Next.js with focus on modern development practices and CI/CD.',
+          features: [
+            'Modern scaffolding techniques',
+            'Automated CI/CD pipelines',
+            'Clean code architecture',
+            'Team collaboration workflows'
+          ],
+          status: 'Internship'
+        },
+        studentTools: {
+          title: 'Student Tool Suite',
+          description: 'Created innovative tools that helped fellow students during internships, earning recognition from industry professionals.',
+          features: [
+            'Student productivity enhancement',
+            'Intuitive user interface',
+            'Problem-solving automation',
+            'Peer collaboration features'
+          ],
+          status: 'Award Winner'
+        }
+      }
     },
     contact: {
       title: 'Get In Touch',
@@ -174,6 +507,18 @@ export const translations = {
       subject: 'Subject',
       message: 'Your message',
       send: 'Send Message',
+      emailTitle: 'Email',
+      emailValue: 'Let\'s connect',
+      emailDesc: 'I typically respond within 24 hours',
+      githubTitle: 'GitHub',
+      githubValue: '@dionvanhecke',
+      githubDesc: 'Check out my latest projects',
+      linkedinTitle: 'LinkedIn',
+      linkedinValue: 'Professional Network',
+      linkedinDesc: 'Let\'s connect professionally',
+      locationTitle: 'Location',
+      locationValue: 'Belgium',
+      locationDesc: 'Open to remote opportunities',
     },
   },
 }

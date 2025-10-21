@@ -39,30 +39,30 @@ const Contact = () => {
   const contactInfo = [
     {
       icon: <Mail className="w-6 h-6" />,
-      title: 'Email',
-      value: 'Let\'s connect',
-      description: 'I typically respond within 24 hours',
+      title: t.contact.emailTitle,
+      value: t.contact.emailValue,
+      description: t.contact.emailDesc,
       action: () => window.location.href = 'mailto:dionvh@icloud.com'
     },
     {
       icon: <Github className="w-6 h-6" />,
-      title: 'GitHub',
-      value: '@dionvanhecke',
-      description: 'Check out my latest projects',
+      title: t.contact.githubTitle,
+      value: t.contact.githubValue,
+      description: t.contact.githubDesc,
       action: () => window.open('https://github.com/dionvanhecke', '_blank')
     },
     {
       icon: <Linkedin className="w-6 h-6" />,
-      title: 'LinkedIn',
-      value: 'Professional Network',
-      description: 'Let\'s connect professionally',
+      title: t.contact.linkedinTitle,
+      value: t.contact.linkedinValue,
+      description: t.contact.linkedinDesc,
       action: () => window.open('https://be.linkedin.com/in/dion-vanhecke-798391232', '_blank')
     },
     {
       icon: <MapPin className="w-6 h-6" />,
-      title: 'Location',
-      value: 'Belgium',
-      description: 'Open to remote opportunities',
+      title: t.contact.locationTitle,
+      value: t.contact.locationValue,
+      description: t.contact.locationDesc,
       action: null
     }
   ]

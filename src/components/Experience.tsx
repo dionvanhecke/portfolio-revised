@@ -14,69 +14,46 @@ const Experience = () => {
 
   const experiences = [
     {
-      title: 'Full Stack Developer',
+      title: t.experience.jobs.simcogroup.title,
       company: 'Simcogroup',
-      period: 'September 2024 - Present',
-      location: 'Belgium',
-      type: 'Full-time',
-      description: 'Developing cutting-edge applications and web platforms with modern technologies.',
-      achievements: [
-        'Developed cross-platform mobile apps for Android and iOS using Tauri and React',
-        'Focused on user-friendly designs with clear typography and intuitive interfaces',
-        'Configured NGINX as webserver for Laravel applications',
-        'Implemented NGINX as reverse proxy for Next.js applications',
-        'Set up Cloudflare as DNS provider for optimal security and performance',
-        'Built scalable web platforms using Next.js, Laravel, and NestJS'
-      ],
+      period: t.experience.jobs.simcogroup.period,
+      location: t.experience.jobs.simcogroup.location,
+      type: t.experience.jobs.simcogroup.type,
+      description: t.experience.jobs.simcogroup.description,
+      achievements: t.experience.jobs.simcogroup.achievements,
       technologies: ['Tauri', 'React', 'Next.js', 'Laravel', 'NestJS', 'NGINX', 'Cloudflare'],
       color: 'blue'
     },
     {
-      title: 'Software Development Intern',
+      title: t.experience.jobs.techbirds.title,
       company: 'Techbirds',
-      period: 'April 2024 - May 2024',
-      location: 'Belgium',
-      type: 'Internship',
-      description: 'Intensive internship focused on modern development practices and team collaboration.',
-      achievements: [
-        'Developed essential soft skills including communication and teamwork',
-        'Built applications using C#, TypeScript, and Next.js',
-        'Learned and applied scaffolding techniques for efficient code generation',
-        'Implemented CI/CD processes to optimize development workflows',
-        'Gained experience with modern development methodologies'
-      ],
+      period: t.experience.jobs.techbirds.period,
+      location: t.experience.jobs.techbirds.location,
+      type: t.experience.jobs.techbirds.type,
+      description: t.experience.jobs.techbirds.description,
+      achievements: t.experience.jobs.techbirds.achievements,
       technologies: ['C#', 'TypeScript', 'Next.js', 'CI/CD', 'Git'],
       color: 'green'
     },
     {
-      title: 'Student - Graduaat Programmeren',
+      title: t.experience.jobs.artevelde.title,
       company: 'Artevelde Hogeschool',
-      period: '2021 - 2024',
-      location: 'Ghent, Belgium',
-      type: 'Education',
-      description: 'Comprehensive programming education focusing on modern web development.',
-      achievements: [
-        'Graduated with strong foundation in programming principles',
-        'Specialized in web development technologies',
-        'Completed various projects using modern frameworks',
-        'Developed problem-solving and analytical thinking skills'
-      ],
+      period: t.experience.jobs.artevelde.period,
+      location: t.experience.jobs.artevelde.location,
+      type: t.experience.jobs.artevelde.type,
+      description: t.experience.jobs.artevelde.description,
+      achievements: t.experience.jobs.artevelde.achievements,
       technologies: ['JavaScript', 'PHP', 'HTML/CSS', 'SQL', 'Git'],
       color: 'purple'
     },
     {
-      title: 'Student - Kantoor',
+      title: t.experience.jobs.spectrum.title,
       company: 'Het Spectrum',
-      period: '2014 - 2021',
-      location: 'Belgium',
-      type: 'Education',
-      description: 'Secondary education with focus on office administration and early programming exposure.',
-      achievements: [
-        'Received internship award for creating innovative tools',
-        'Developed tools that helped fellow students during internships',
-        'Recognized by industry professionals for exceptional work',
-        'Early demonstration of programming aptitude and problem-solving skills'
-      ],
+      period: t.experience.jobs.spectrum.period,
+      location: t.experience.jobs.spectrum.location,
+      type: t.experience.jobs.spectrum.type,
+      description: t.experience.jobs.spectrum.description,
+      achievements: t.experience.jobs.spectrum.achievements,
       technologies: ['Early Programming', 'Office Tools', 'Problem Solving'],
       color: 'amber'
     }

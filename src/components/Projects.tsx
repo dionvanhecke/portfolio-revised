@@ -17,71 +17,51 @@ const Projects = () => {
 
   const projects = [
     {
-      title: 'Cross-Platform Desktop & Mobile Apps',
+      title: t.projects.items.crossPlatform.title,
       category: 'mobile',
-      description: 'Developed applications for Windows, macOS, iOS, and Android using Tauri and React with focus on user-friendly design and clear typography.',
+      description: t.projects.items.crossPlatform.description,
       image: '/parapluu.png',
       technologies: ['Tauri', 'React', 'TypeScript', 'Windows', 'macOS', 'iOS', 'Android'],
-      features: [
-        'Windows, macOS, iOS & Android support',
-        'User-friendly interface design',
-        'Clear typography and accessibility',
-        'Native performance with web technologies'
-      ],
+      features: t.projects.items.crossPlatform.features,
       company: 'Simcogroup',
       year: '2024',
-      status: 'Professional',
+      status: t.projects.items.crossPlatform.status,
       icon: <Smartphone className="w-6 h-6" />
     },
     {
-      title: 'Web Platform Infrastructure',
+      title: t.projects.items.webPlatform.title,
       category: 'web',
-      description: 'Built scalable web platforms using Next.js, Laravel, and NestJS with NGINX configuration and Cloudflare integration.',
+      description: t.projects.items.webPlatform.description,
       image: '/api/placeholder/600/400',
       technologies: ['Next.js', 'Laravel', 'NestJS', 'NGINX', 'Cloudflare'],
-      features: [
-        'NGINX webserver configuration for Laravel',
-        'Reverse proxy setup for Next.js',
-        'Cloudflare DNS and security optimization',
-        'Scalable architecture design'
-      ],
+      features: t.projects.items.webPlatform.features,
       company: 'Simcogroup',
       year: '2024',
-      status: 'Professional',
+      status: t.projects.items.webPlatform.status,
       icon: <Globe className="w-6 h-6" />
     },
     {
-      title: 'Modern Web Applications',
+      title: t.projects.items.modernWeb.title,
       category: 'web',
-      description: 'Developed applications using C#, TypeScript, and Next.js with focus on modern development practices and CI/CD.',
+      description: t.projects.items.modernWeb.description,
       image: '/api/placeholder/600/400',
       technologies: ['C#', 'TypeScript', 'Next.js', 'CI/CD', 'Git'],
-      features: [
-        'Modern scaffolding techniques',
-        'Automated CI/CD pipelines',
-        'Clean code architecture',
-        'Team collaboration workflows'
-      ],
+      features: t.projects.items.modernWeb.features,
       company: 'Techbirds',
       year: '2024',
-      status: 'Internship',
+      status: t.projects.items.modernWeb.status,
       icon: <Code className="w-6 h-6" />
     },
     {
-      title: 'Student Tool Suite',
+      title: t.projects.items.studentTools.title,
       category: 'tools',
-      description: 'Created innovative tools that helped fellow students during internships, earning recognition from industry professionals.',
+      description: t.projects.items.studentTools.description,
       image: '/api/placeholder/600/400',
       technologies: ['JavaScript', 'HTML/CSS', 'Problem Solving'],
-      features: [
-        'Student productivity enhancement',
-        'Intuitive user interface',
-        'Problem-solving automation',
-        'Peer collaboration features'
-      ],
+      features: t.projects.items.studentTools.features,
       company: 'Het Spectrum',
       year: '2014-2021',
-      status: 'Award Winner',
+      status: t.projects.items.studentTools.status,
       icon: <Database className="w-6 h-6" />
     }
   ]
