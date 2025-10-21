@@ -41,7 +41,7 @@ const ProjectDetail = () => {
   useEffect(() => {
     const fetchProject = async () => {
       try {
-        const response = await fetch(`/api/projects/${params.id}`)
+        const response = await fetch(`/api/projects/${params.id}?lang=${language}`)
         if (response.ok) {
           const data = await response.json()
           setProject(data)
@@ -56,7 +56,7 @@ const ProjectDetail = () => {
     if (params.id) {
       fetchProject()
     }
-  }, [params.id])
+  }, [params.id, language])
 
   if (loading) {
     return (

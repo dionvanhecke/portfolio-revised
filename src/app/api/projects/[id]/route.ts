@@ -6,9 +6,11 @@ export async function GET(
   { params }: { params: Promise<{ id: string }> }
 ) {
   const { id } = await params
+  const { searchParams } = new URL(request.url)
+  const language = (searchParams.get('lang') || 'nl') as 'nl' | 'fr' | 'en'
   
   try {
-    const project = getProjectData(id)
+    const project = getProjectData(id, language)
     
     if (!project) {
       return NextResponse.json(

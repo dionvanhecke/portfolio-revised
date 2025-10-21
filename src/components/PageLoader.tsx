@@ -8,6 +8,13 @@ const PageLoader = () => {
   const [progress, setProgress] = useState(0)
 
   useEffect(() => {
+    // Blokkeer scrollen tijdens laden
+    if (isLoading) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = 'unset'
+    }
+
     const progressInterval = setInterval(() => {
       setProgress(prev => {
         if (prev >= 100) {
@@ -25,8 +32,9 @@ const PageLoader = () => {
     return () => {
       clearInterval(progressInterval)
       clearTimeout(timer)
+      document.body.style.overflow = 'unset'
     }
-  }, [])
+  }, [isLoading])
 
   return (
     <AnimatePresence>

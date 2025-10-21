@@ -40,9 +40,16 @@ export function getAllProjectIds(): string[] {
   }
 }
 
-export function getProjectData(id: string): Project | null {
+export function getProjectData(id: string, language: 'nl' | 'fr' | 'en' = 'nl'): Project | null {
   try {
-    const fullPath = path.join(projectsDirectory, `${id}.md`)
+    // Try to load language-specific file first (e.g., project.nl.md)
+    let fullPath = path.join(projectsDirectory, `${id}.${language}.md`)
+    
+    // If language-specific file doesn't exist, fall back to default .md file
+    if (!fs.existsSync(fullPath)) {
+      fullPath = path.join(projectsDirectory, `${id}.md`)
+    }
+    
     const fileContents = fs.readFileSync(fullPath, 'utf8')
     const { data, content } = matter(fileContents)
 
