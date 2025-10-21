@@ -18,18 +18,24 @@ const PageLoader = () => {
     if (typeof window !== 'undefined') {
       sessionStorage.setItem('hasVisited', 'true')
     }
+    
+    // Alleen scroll blokkeren als we daadwerkelijk aan het laden zijn
+    if (!isLoading) {
+      // Zorg ervoor dat body altijd scrollbaar is als we niet laden
+      document.body.style.overflow = ''
+      document.body.style.position = ''
+      document.body.style.width = ''
+      document.body.style.height = ''
+      document.documentElement.style.overflow = ''
+      return
+    }
+    
     if (isLoading) {
       document.body.style.overflow = 'hidden'
       document.body.style.position = 'fixed'
       document.body.style.width = '100%'
       document.body.style.height = '100%'
       document.documentElement.style.overflow = 'hidden'
-    } else {
-      document.body.style.overflow = ''
-      document.body.style.position = ''
-      document.body.style.width = ''
-      document.body.style.height = ''
-      document.documentElement.style.overflow = ''
     }
 
     const progressInterval = setInterval(() => {

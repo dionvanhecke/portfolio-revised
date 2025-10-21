@@ -54,6 +54,7 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        style={{ overflow: 'auto' }}
       >
         <LanguageProvider>
           {children}
