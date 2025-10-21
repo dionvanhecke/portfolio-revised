@@ -16,6 +16,10 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Dion Van Hecke - Full Stack Developer Portfolio",
   description: "Junior Full Stack Developer with 9 years of coding passion. Specializing in Next.js, React, TypeScript, and modern web technologies. Available for exciting opportunities.",
+  icons: {
+    icon: '/favicon.svg',
+    apple: '/favicon.svg',
+  },
   keywords: "Full Stack Developer, Next.js, React, TypeScript, Web Development, Belgium, Junior Developer, Portfolio",
   authors: [{ name: "Dion Van Hecke" }],
   creator: "Dion Van Hecke",
