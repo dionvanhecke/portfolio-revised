@@ -11,7 +11,7 @@ status:
   nl: Stage
   fr: Stage
   en: Internship
-image: /api/placeholder/600/400
+image: /swyp.jpg
 technologies:
   - C#
   - TypeScript

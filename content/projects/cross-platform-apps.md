@@ -11,7 +11,7 @@ status:
   nl: Professioneel
   fr: Professionnel
   en: Professional
-image: /parapluu.png
+image: /parapluu.webp
 technologies:
   - Tauri
   - React

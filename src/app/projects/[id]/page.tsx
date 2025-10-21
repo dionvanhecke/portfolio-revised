@@ -6,6 +6,7 @@ import { motion } from 'framer-motion'
 import { ArrowLeft, ExternalLink } from 'lucide-react'
 import { useLanguage } from '@/context/LanguageContext'
 import ReactMarkdown from 'react-markdown'
+import Image from 'next/image'
 
 interface ProjectMetadata {
   id: string
@@ -122,12 +123,15 @@ const ProjectDetail = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="mb-12 rounded-2xl overflow-hidden border-2 border-neutral-200 dark:border-neutral-800"
+              className="mb-12 rounded-2xl overflow-hidden border-2 border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-900"
             >
-              <img
+              <Image
                 src={project.metadata.image}
                 alt={project.metadata.title[language]}
-                className="w-full h-auto"
+                width={1400}
+                height={788}
+                className="w-full h-auto object-contain"
+                priority
               />
             </motion.div>
           )}

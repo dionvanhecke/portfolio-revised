@@ -11,7 +11,7 @@ status:
   nl: Award Winnaar
   fr: Lauréat
   en: Award Winner
-image: /api/placeholder/600/400
+image: /award.png
 technologies:
   - JavaScript
   - HTML/CSS

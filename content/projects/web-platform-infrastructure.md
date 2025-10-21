@@ -11,7 +11,7 @@ status:
   nl: Professioneel
   fr: Professionnel
   en: Professional
-image: /api/placeholder/600/400
+image: /cloudflarenginx.webp
 technologies:
   - Next.js
   - Laravel

@@ -6,6 +6,7 @@ import { useInView } from 'react-intersection-observer'
 import { Smartphone, Globe, Code, Database, ArrowRight } from 'lucide-react'
 import { useLanguage } from '@/context/LanguageContext'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const Projects = () => {
   const { t } = useLanguage()
@@ -22,7 +23,7 @@ const Projects = () => {
       title: t.projects.items.crossPlatform.title,
       category: 'mobile',
       description: t.projects.items.crossPlatform.description,
-      image: '/parapluu.png',
+      image: '/parapluu.webp',
       technologies: ['Tauri', 'React', 'TypeScript', 'Windows', 'macOS', 'iOS', 'Android'],
       features: t.projects.items.crossPlatform.features,
       company: 'Simcogroup',
@@ -35,7 +36,7 @@ const Projects = () => {
       title: t.projects.items.webPlatform.title,
       category: 'web',
       description: t.projects.items.webPlatform.description,
-      image: '/api/placeholder/600/400',
+      image: '/cloudflarenginx.webp',
       technologies: ['Next.js', 'Laravel', 'NestJS', 'NGINX', 'Cloudflare'],
       features: t.projects.items.webPlatform.features,
       company: 'Simcogroup',
@@ -48,7 +49,7 @@ const Projects = () => {
       title: t.projects.items.modernWeb.title,
       category: 'web',
       description: t.projects.items.modernWeb.description,
-      image: '/api/placeholder/600/400',
+      image: '/swyp.jpg',
       technologies: ['C#', 'TypeScript', 'Next.js', 'CI/CD', 'Git'],
       features: t.projects.items.modernWeb.features,
       company: 'Techbirds',
@@ -61,7 +62,7 @@ const Projects = () => {
       title: t.projects.items.studentTools.title,
       category: 'tools',
       description: t.projects.items.studentTools.description,
-      image: '/api/placeholder/600/400',
+      image: '/award.png',
       technologies: ['JavaScript', 'HTML/CSS', 'Problem Solving'],
       features: t.projects.items.studentTools.features,
       company: 'Het Spectrum',
@@ -192,11 +193,14 @@ const Projects = () => {
                   </div>
                   </div>
 
-                  <div className="hidden md:flex aspect-video bg-neutral-900 dark:bg-neutral-900 rounded-2xl overflow-hidden border-2 border-neutral-200 dark:border-neutral-800 items-center justify-center p-8">
-                    <img 
+                  <div className="hidden md:flex aspect-video bg-neutral-50 dark:bg-neutral-900 rounded-2xl overflow-hidden border-2 border-neutral-200 dark:border-neutral-800 items-center justify-center p-8 relative">
+                    <Image 
                       src={project.image} 
                       alt={project.title}
+                      width={1200}
+                      height={675}
                       className="w-full h-full object-contain"
+                      priority={index < 2}
                     />
                   </div>
                 </div>

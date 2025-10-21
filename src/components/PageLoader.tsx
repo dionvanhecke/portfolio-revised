@@ -4,10 +4,20 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { useEffect, useState } from 'react'
 
 const PageLoader = () => {
-  const [isLoading, setIsLoading] = useState(true)
+  const [isLoading, setIsLoading] = useState(() => {
+    // Alleen tonen bij eerste bezoek
+    if (typeof window !== 'undefined') {
+      return !sessionStorage.getItem('hasVisited')
+    }
+    return true
+  })
   const [progress, setProgress] = useState(0)
 
   useEffect(() => {
+    // Markeer als bezocht
+    if (typeof window !== 'undefined') {
+      sessionStorage.setItem('hasVisited', 'true')
+    }
     if (isLoading) {
       document.body.style.overflow = 'hidden'
       document.body.style.position = 'fixed'
