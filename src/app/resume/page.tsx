@@ -9,28 +9,8 @@ import './print.css'
 const Resume = () => {
   const { t, language } = useLanguage()
 
-  const handleDownloadPDF = async () => {
-    try {
-      // Import html2pdf dynamically
-      const html2pdf = (await import('html2pdf.js')).default
-      
-      const element = document.getElementById('resume-content')
-      if (!element) return
-      
-      const opt = {
-        margin: 10,
-        filename: 'Dion_Van_Hecke_Resume.pdf',
-        image: { type: 'jpeg', quality: 0.98 },
-        html2canvas: { scale: 2, useCORS: true },
-        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
-      }
-      
-      await html2pdf().set(opt).from(element).save()
-    } catch (error) {
-      console.error('Error generating PDF:', error)
-      // Fallback to print
-      window.print()
-    }
+  const handleDownloadPDF = () => {
+    window.print()
   }
 
   return (
