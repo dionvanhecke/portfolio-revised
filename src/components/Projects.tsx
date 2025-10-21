@@ -3,8 +3,9 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { Smartphone, Globe, Code, Database } from 'lucide-react'
+import { Smartphone, Globe, Code, Database, ArrowRight } from 'lucide-react'
 import { useLanguage } from '@/context/LanguageContext'
+import Link from 'next/link'
 
 const Projects = () => {
   const { t } = useLanguage()
@@ -17,6 +18,7 @@ const Projects = () => {
 
   const projects = [
     {
+      id: 'cross-platform-apps',
       title: t.projects.items.crossPlatform.title,
       category: 'mobile',
       description: t.projects.items.crossPlatform.description,
@@ -29,6 +31,7 @@ const Projects = () => {
       icon: <Smartphone className="w-6 h-6" />
     },
     {
+      id: 'web-platform-infrastructure',
       title: t.projects.items.webPlatform.title,
       category: 'web',
       description: t.projects.items.webPlatform.description,
@@ -41,6 +44,7 @@ const Projects = () => {
       icon: <Globe className="w-6 h-6" />
     },
     {
+      id: 'modern-web-applications',
       title: t.projects.items.modernWeb.title,
       category: 'web',
       description: t.projects.items.modernWeb.description,
@@ -53,6 +57,7 @@ const Projects = () => {
       icon: <Code className="w-6 h-6" />
     },
     {
+      id: 'student-tool-suite',
       title: t.projects.items.studentTools.title,
       category: 'tools',
       description: t.projects.items.studentTools.description,
@@ -117,7 +122,7 @@ const Projects = () => {
         <div className="relative">
           {filteredProjects.map((project, index) => (
             <motion.div
-              key={project.title}
+              key={project.id}
               initial={{ opacity: 0, y: 60 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: false, amount: 0.15 }}
@@ -129,7 +134,11 @@ const Projects = () => {
                 marginBottom: index === filteredProjects.length - 1 ? '0' : '48px',
               }}
             >
-              <div className="bg-white dark:bg-black p-6 md:p-10 rounded-2xl md:rounded-3xl border-2 border-neutral-200 dark:border-neutral-800"
+              <Link href={`/projects/${project.id}`}>
+              <motion.div 
+                whileHover={{ y: -4 }}
+                transition={{ duration: 0.2 }}
+                className="bg-white dark:bg-black p-6 md:p-10 rounded-2xl md:rounded-3xl border-2 border-neutral-200 dark:border-neutral-800 cursor-pointer group"
                 style={{
                   boxShadow: '0 10px 40px rgba(0, 0, 0, 0.08)',
                 }}
@@ -191,7 +200,13 @@ const Projects = () => {
                     />
                   </div>
                 </div>
-              </div>
+
+                <div className="mt-6 flex items-center gap-2 text-sm text-neutral-600 dark:text-neutral-400 group-hover:text-black dark:group-hover:text-white transition-colors">
+                  <span>Bekijk project details</span>
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </motion.div>
+              </Link>
             </motion.div>
           ))}
         </div>
