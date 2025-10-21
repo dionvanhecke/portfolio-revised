@@ -6,7 +6,7 @@ title:
   en: Cross-Platform Desktop & Mobile Apps
 category: mobile
 company: Simcogroup
-year: 2024
+year: 2025
 status:
   nl: Professioneel
   fr: Professionnel

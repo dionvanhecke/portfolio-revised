@@ -27,7 +27,7 @@ const Projects = () => {
       technologies: ['Tauri', 'React', 'TypeScript', 'Windows', 'macOS', 'iOS', 'Android'],
       features: t.projects.items.crossPlatform.features,
       company: 'Simcogroup',
-      year: '2024',
+      year: '2025',
       status: t.projects.items.crossPlatform.status,
       icon: <Smartphone className="w-6 h-6" />
     },
