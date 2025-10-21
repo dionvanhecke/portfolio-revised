@@ -25,6 +25,7 @@ interface ProjectMetadata {
   }
   image: string
   technologies: string[]
+  liveUrl?: string
 }
 
 interface Project {
@@ -108,13 +109,24 @@ const ProjectDetail = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium text-black dark:text-white mb-6">
               {project.metadata.title[language]}
             </h1>
-            <div className="flex items-center gap-4 mb-8">
+            <div className="flex items-center gap-4 mb-8 flex-wrap">
               <span className="px-4 py-2 text-sm bg-neutral-100 dark:bg-neutral-900 text-neutral-700 dark:text-neutral-300 rounded-full">
                 {project.metadata.status[language]}
               </span>
               <span className="text-sm text-neutral-500 dark:text-neutral-500">
                 {project.metadata.category}
               </span>
+              {project.metadata.liveUrl && (
+                <a
+                  href={project.metadata.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-4 py-2 text-sm bg-black dark:bg-white text-white dark:text-black rounded-full hover:opacity-80 transition-opacity"
+                >
+                  <ExternalLink className="w-4 h-4" />
+                  <span>Bekijk live website</span>
+                </a>
+              )}
             </div>
           </div>
 
@@ -128,10 +140,10 @@ const ProjectDetail = () => {
               <Image
                 src={project.metadata.image}
                 alt={project.metadata.title[language]}
-                width={1400}
-                height={788}
-                className="w-full h-auto object-contain"
-                priority
+                width={0}
+                height={0}
+                sizes="100vw"
+                style={{ width: '100%', height: 'auto' }}
               />
             </motion.div>
           )}

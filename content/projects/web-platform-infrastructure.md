@@ -11,7 +11,7 @@ status:
   nl: Professioneel
   fr: Professionnel
   en: Professional
-image: /cloudflarenginx.webp
+image: /cloudflare-cover.png
 technologies:
   - Next.js
   - Laravel

@@ -19,6 +19,7 @@ export interface ProjectMetadata {
   }
   image: string
   technologies: string[]
+  liveUrl?: string
 }
 
 export interface Project {

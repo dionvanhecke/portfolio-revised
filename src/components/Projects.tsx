@@ -23,7 +23,7 @@ const Projects = () => {
       title: t.projects.items.crossPlatform.title,
       category: 'mobile',
       description: t.projects.items.crossPlatform.description,
-      image: '/parapluu.webp',
+      image: '/parapluu-02.jpg',
       technologies: ['Tauri', 'React', 'TypeScript', 'Windows', 'macOS', 'iOS', 'Android'],
       features: t.projects.items.crossPlatform.features,
       company: 'Simcogroup',
@@ -36,7 +36,7 @@ const Projects = () => {
       title: t.projects.items.webPlatform.title,
       category: 'web',
       description: t.projects.items.webPlatform.description,
-      image: '/cloudflarenginx.webp',
+      image: '/cloudflare-cover.png',
       technologies: ['Next.js', 'Laravel', 'NestJS', 'NGINX', 'Cloudflare'],
       features: t.projects.items.webPlatform.features,
       company: 'Simcogroup',
@@ -45,11 +45,29 @@ const Projects = () => {
       icon: <Globe className="w-6 h-6" />
     },
     {
+      id: 'bizzinfra',
+      title: 'BizzInfra Website',
+      category: 'web',
+      description: 'Ontwikkelde de moderne website voor BizzInfra (bizzinfra.be) met Next.js, met focus op professionele uitstraling en optimale prestaties.',
+      image: '/bizzinfra.png',
+      technologies: ['Next.js', 'TypeScript', 'React', 'Tailwind CSS'],
+      features: [
+        'Modern Next.js framework met SSR',
+        'Professioneel en responsive design',
+        'SEO geoptimaliseerd',
+        'Type-veiligheid met TypeScript'
+      ],
+      company: 'Simcogroup',
+      year: '2025',
+      status: 'Professioneel',
+      icon: <Globe className="w-6 h-6" />
+    },
+    {
       id: 'modern-web-applications',
       title: t.projects.items.modernWeb.title,
       category: 'web',
       description: t.projects.items.modernWeb.description,
-      image: '/swyp.jpg',
+      image: '/swyp.png',
       technologies: ['C#', 'TypeScript', 'Next.js', 'CI/CD', 'Git'],
       features: t.projects.items.modernWeb.features,
       company: 'Techbirds',
@@ -193,14 +211,14 @@ const Projects = () => {
                   </div>
                   </div>
 
-                  <div className="hidden md:flex aspect-video bg-neutral-50 dark:bg-neutral-900 rounded-2xl overflow-hidden border-2 border-neutral-200 dark:border-neutral-800 items-center justify-center p-8 relative">
+                  <div className="hidden md:flex aspect-video bg-neutral-50 dark:bg-neutral-900 rounded-2xl overflow-hidden border-2 border-neutral-200 dark:border-neutral-800 items-center justify-center relative">
                     <Image 
                       src={project.image} 
                       alt={project.title}
-                      width={1200}
-                      height={675}
-                      className="w-full h-full object-contain"
-                      priority={index < 2}
+                      width={0}
+                      height={0}
+                      sizes="100vw"
+                      style={{ width: '100%', height: 'auto' }} // optional
                     />
                   </div>
                 </div>
