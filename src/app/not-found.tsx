@@ -69,7 +69,7 @@ export default function NotFound() {
           className="mt-12 pt-8 border-t border-neutral-200 dark:border-neutral-800"
         >
           <p className="text-sm text-neutral-500 dark:text-neutral-500 mb-4">
-            Misschien zoek je een van deze pagina's:
+            Misschien zoek je een van deze pagina&apos;s:
           </p>
           <div className="flex flex-wrap gap-3 justify-center">
             <Link
