@@ -8,11 +8,18 @@ const PageLoader = () => {
   const [progress, setProgress] = useState(0)
 
   useEffect(() => {
-    // Blokkeer scrollen tijdens laden
     if (isLoading) {
       document.body.style.overflow = 'hidden'
+      document.body.style.position = 'fixed'
+      document.body.style.width = '100%'
+      document.body.style.height = '100%'
+      document.documentElement.style.overflow = 'hidden'
     } else {
-      document.body.style.overflow = 'unset'
+      document.body.style.overflow = ''
+      document.body.style.position = ''
+      document.body.style.width = ''
+      document.body.style.height = ''
+      document.documentElement.style.overflow = ''
     }
 
     const progressInterval = setInterval(() => {
@@ -32,7 +39,11 @@ const PageLoader = () => {
     return () => {
       clearInterval(progressInterval)
       clearTimeout(timer)
-      document.body.style.overflow = 'unset'
+      document.body.style.overflow = ''
+      document.body.style.position = ''
+      document.body.style.width = ''
+      document.body.style.height = ''
+      document.documentElement.style.overflow = ''
     }
   }, [isLoading])
 
