@@ -4,20 +4,28 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { useEffect, useState } from 'react'
 
 const PageLoader = () => {
-  const [isLoading, setIsLoading] = useState(() => {
-    // Alleen tonen bij eerste bezoek
-    if (typeof window !== 'undefined') {
-      return !sessionStorage.getItem('hasVisited')
-    }
-    return true
-  })
+  const [isLoading, setIsLoading] = useState(false)
   const [progress, setProgress] = useState(0)
+  const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
-    // Markeer als bezocht
+    setMounted(true)
+    
+    // Alleen tonen bij eerste bezoek van de homepage
     if (typeof window !== 'undefined') {
-      sessionStorage.setItem('hasVisited', 'true')
+      const hasVisited = sessionStorage.getItem('hasVisited')
+      const isHomePage = window.location.pathname === '/'
+      
+      // Alleen laden als het de homepage is EN nog niet bezocht
+      if (!hasVisited && isHomePage) {
+        setIsLoading(true)
+        sessionStorage.setItem('hasVisited', 'true')
+      }
     }
+  }, [])
+
+  useEffect(() => {
+    if (!mounted) return
     
     // Alleen scroll blokkeren als we daadwerkelijk aan het laden zijn
     if (!isLoading) {
@@ -61,7 +69,7 @@ const PageLoader = () => {
       document.body.style.height = ''
       document.documentElement.style.overflow = ''
     }
-  }, [isLoading])
+  }, [isLoading, mounted])
 
   return (
     <AnimatePresence>
