@@ -6,70 +6,64 @@ import { useEffect, useState } from 'react'
 const PageLoader = () => {
   const [isLoading, setIsLoading] = useState(false)
   const [progress, setProgress] = useState(0)
-  const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
-    setMounted(true)
+    // Check if we should show the loader
+    if (typeof window === 'undefined') return
     
-    // Alleen tonen bij eerste bezoek van de homepage
-    if (typeof window !== 'undefined') {
-      const hasVisited = sessionStorage.getItem('hasVisited')
-      const isHomePage = window.location.pathname === '/'
+    const hasVisited = sessionStorage.getItem('hasVisited')
+    const isHomePage = window.location.pathname === '/'
+    
+    // Only show loader on first visit to homepage
+    if (!hasVisited && isHomePage) {
+      setIsLoading(true)
+      sessionStorage.setItem('hasVisited', 'true')
       
-      // Alleen laden als het de homepage is EN nog niet bezocht
-      if (!hasVisited && isHomePage) {
-        setIsLoading(true)
-        sessionStorage.setItem('hasVisited', 'true')
+      // Progress animation
+      const progressInterval = setInterval(() => {
+        setProgress(prev => {
+          if (prev >= 100) {
+            clearInterval(progressInterval)
+            return 100
+          }
+          return prev + 2
+        })
+      }, 30)
+
+      // Hide loader after animation
+      const timer = setTimeout(() => {
+        setIsLoading(false)
+      }, 2200)
+
+      return () => {
+        clearInterval(progressInterval)
+        clearTimeout(timer)
       }
     }
   }, [])
 
   useEffect(() => {
-    if (!mounted) return
-    
-    // Alleen scroll blokkeren als we daadwerkelijk aan het laden zijn
-    if (!isLoading) {
-      // Zorg ervoor dat body altijd scrollbaar is als we niet laden
-      document.body.style.overflow = ''
-      document.body.style.position = ''
-      document.body.style.width = ''
-      document.body.style.height = ''
-      document.documentElement.style.overflow = ''
-      return
-    }
-    
+    // Manage body scroll
     if (isLoading) {
       document.body.style.overflow = 'hidden'
       document.body.style.position = 'fixed'
       document.body.style.width = '100%'
       document.body.style.height = '100%'
-      document.documentElement.style.overflow = 'hidden'
-    }
-
-    const progressInterval = setInterval(() => {
-      setProgress(prev => {
-        if (prev >= 100) {
-          clearInterval(progressInterval)
-          return 100
-        }
-        return prev + 2
-      })
-    }, 30)
-
-    const timer = setTimeout(() => {
-      setIsLoading(false)
-    }, 2200)
-
-    return () => {
-      clearInterval(progressInterval)
-      clearTimeout(timer)
+    } else {
       document.body.style.overflow = ''
       document.body.style.position = ''
       document.body.style.width = ''
       document.body.style.height = ''
-      document.documentElement.style.overflow = ''
     }
-  }, [isLoading, mounted])
+
+    // Cleanup on unmount
+    return () => {
+      document.body.style.overflow = ''
+      document.body.style.position = ''
+      document.body.style.width = ''
+      document.body.style.height = ''
+    }
+  }, [isLoading])
 
   return (
     <AnimatePresence>
