@@ -56,7 +56,7 @@ const Contact = () => {
       title: t.contact.linkedinTitle,
       value: t.contact.linkedinValue,
       description: t.contact.linkedinDesc,
-      action: () => window.open('https://be.linkedin.com/in/dion-vanhecke-798391232', '_blank')
+      action: () => window.open('https://be.linkedin.com/in/dionvanhecke', '_blank')
     },
     {
       icon: <MapPin className="w-6 h-6" />,
@@ -215,7 +215,7 @@ const Contact = () => {
             </motion.a>
             <motion.a
               whileHover={{ opacity: 0.7 }}
-              href="https://be.linkedin.com/in/dion-vanhecke-798391232"
+              href="https://be.linkedin.com/in/dionvanhecke"
               target="_blank"
               rel="noopener noreferrer"
               className="text-sm text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors"

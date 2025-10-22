@@ -36,7 +36,7 @@ export default function StructuredData() {
     ],
     "sameAs": [
       "https://github.com/dionvanhecke",
-      "https://be.linkedin.com/in/dion-vanhecke-798391232"
+      "https://be.linkedin.com/in/dionvanhecke"
     ],
     "worksFor": {
       "@type": "Organization",

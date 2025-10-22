@@ -73,7 +73,7 @@ const Hero = () => {
 
             <motion.a
               whileHover={{ x: 4 }}
-              href="https://be.linkedin.com/in/dion-vanhecke-798391232"
+              href="https://be.linkedin.com/in/dionvanhecke"
               target="_blank"
               rel="noopener noreferrer"
               className="text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors"
