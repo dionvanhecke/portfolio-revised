@@ -31,7 +31,6 @@ const Navigation = () => {
     { name: t.nav.experience, href: '#experience' },
     { name: t.nav.projects, href: '#projects' },
     { name: t.nav.contact, href: '#contact' },
-    { name: 'Resume', href: '/resume', isExternal: true },
   ]
 
   const scrollToSection = (href: string) => {
@@ -68,27 +67,15 @@ const Navigation = () => {
           <div className="w-px h-6 bg-neutral-200 dark:bg-neutral-800" />
           
           {navItems.map((item) => (
-            item.isExternal ? (
-              <Link key={item.name} href={item.href}>
-                <motion.div
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="px-4 py-2 text-sm text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors font-medium rounded-full hover:bg-neutral-100 dark:hover:bg-neutral-900 cursor-pointer"
-                >
-                  {item.name}
-                </motion.div>
-              </Link>
-            ) : (
-              <motion.button
-                key={item.name}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                onClick={() => scrollToSection(item.href)}
-                className="px-4 py-2 text-sm text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors font-medium rounded-full hover:bg-neutral-100 dark:hover:bg-neutral-900"
-              >
-                {item.name}
-              </motion.button>
-            )
+            <motion.button
+              key={item.name}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => scrollToSection(item.href)}
+              className="px-4 py-2 text-sm text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors font-medium rounded-full hover:bg-neutral-100 dark:hover:bg-neutral-900"
+            >
+              {item.name}
+            </motion.button>
           ))}
           
           <div className="w-px h-6 bg-neutral-200 dark:bg-neutral-800" />
@@ -217,30 +204,16 @@ const Navigation = () => {
           >
             <div className="space-y-2">
               {navItems.map((item, index) => (
-                item.isExternal ? (
-                  <Link key={item.name} href={item.href}>
-                    <motion.div
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: index * 0.05, ease: [0.16, 1, 0.3, 1] }}
-                      onClick={() => setIsMobileMenuOpen(false)}
-                      className="block w-full text-left px-4 py-3 text-base text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white hover:bg-neutral-100 dark:hover:bg-neutral-900 rounded-xl transition-colors cursor-pointer"
-                    >
-                      {item.name}
-                    </motion.div>
-                  </Link>
-                ) : (
-                  <motion.button
-                    key={item.name}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: index * 0.05, ease: [0.16, 1, 0.3, 1] }}
-                    onClick={() => scrollToSection(item.href)}
-                    className="block w-full text-left px-4 py-3 text-base text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white hover:bg-neutral-100 dark:hover:bg-neutral-900 rounded-xl transition-colors"
-                  >
-                    {item.name}
-                  </motion.button>
-                )
+                <motion.button
+                  key={item.name}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: index * 0.05, ease: [0.16, 1, 0.3, 1] }}
+                  onClick={() => scrollToSection(item.href)}
+                  className="block w-full text-left px-4 py-3 text-base text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white hover:bg-neutral-100 dark:hover:bg-neutral-900 rounded-xl transition-colors"
+                >
+                  {item.name}
+                </motion.button>
               ))}
               
             </div>

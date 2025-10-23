@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { ArrowDown } from 'lucide-react'
 import { useLanguage } from '@/context/LanguageContext'
+import Link from 'next/link'
 
 const Hero = () => {
   const { t } = useLanguage()
@@ -60,6 +61,15 @@ const Hero = () => {
             </motion.button>
 
             <span className="text-neutral-300 dark:text-neutral-700">|</span>
+
+            <Link href="/resume">
+              <motion.span
+                whileHover={{ x: 4 }}
+                className="text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors cursor-pointer inline-block"
+              >
+                Resume
+              </motion.span>
+            </Link>
 
             <motion.a
               whileHover={{ x: 4 }}
