@@ -8,16 +8,24 @@ const BackToTop = () => {
   const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
+    let timeoutId: NodeJS.Timeout
+
     const toggleVisibility = () => {
-      if (window.pageYOffset > 300) {
-        setIsVisible(true)
-      } else {
-        setIsVisible(false)
-      }
+      clearTimeout(timeoutId)
+      timeoutId = setTimeout(() => {
+        if (window.pageYOffset > 300) {
+          setIsVisible(true)
+        } else {
+          setIsVisible(false)
+        }
+      }, 100)
     }
 
-    window.addEventListener('scroll', toggleVisibility)
-    return () => window.removeEventListener('scroll', toggleVisibility)
+    window.addEventListener('scroll', toggleVisibility, { passive: true })
+    return () => {
+      clearTimeout(timeoutId)
+      window.removeEventListener('scroll', toggleVisibility)
+    }
   }, [])
 
   const scrollToTop = () => {
