@@ -6,7 +6,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 const ModernResume = () => {
-  const { } = useLanguage()
+  const { t } = useLanguage()
 
   const handleDownloadPDF = () => {
     window.print()
@@ -37,13 +37,13 @@ const ModernResume = () => {
       <div className="print:hidden sticky top-0 z-50 backdrop-blur-xl bg-white/70 dark:bg-black/70 border-b border-neutral-200/50 dark:border-neutral-800/50">
         <div className="w-full max-w-[1200px] mx-auto px-6 sm:px-12 py-4 flex justify-between items-center">
           <Link href="/" className="text-sm text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors">
-            ← Portfolio
+            ← {t.resume.backToPortfolio}
           </Link>
           <button
             onClick={handleDownloadPDF}
             className="px-6 py-2.5 bg-gradient-to-r from-black to-neutral-800 dark:from-white dark:to-neutral-200 text-white dark:text-black rounded-xl hover:shadow-lg transition-all text-sm font-medium"
           >
-            Download PDF
+            {t.resume.downloadPDF}
           </button>
         </div>
       </div>
@@ -116,11 +116,10 @@ const ModernResume = () => {
               >
                 <h2 className="text-2xl font-bold text-black dark:text-white print:text-black mb-4 flex items-center gap-3">
                   <span className="w-2 h-8 bg-gradient-to-b from-black to-neutral-600 dark:from-white dark:to-neutral-400 print:from-black print:to-neutral-600 rounded-full" />
-                  Profiel
+                  {t.resume.profile}
                 </h2>
                 <p className="text-neutral-700 dark:text-neutral-300 print:text-neutral-700 leading-relaxed text-lg">
-                  Gepassioneerde Junior Full Stack Developer met 9 jaar programmeerervaring sinds 14-jarige leeftijd. 
-                  Gespecialiseerd in moderne webtechnologieën zoals Next.js, React, TypeScript en Laravel.
+                  {t.resume.profileText}
                 </p>
               </motion.section>
 
@@ -131,7 +130,7 @@ const ModernResume = () => {
               >
                 <h2 className="text-2xl font-bold text-black dark:text-white print:text-black mb-6 flex items-center gap-3">
                   <span className="w-2 h-8 bg-gradient-to-b from-black to-neutral-600 dark:from-white dark:to-neutral-400 print:from-black print:to-neutral-600 rounded-full" />
-                  Werkervaring
+                  {t.resume.workExperience}
                 </h2>
                 
                 <div className="space-y-8">
@@ -206,7 +205,7 @@ const ModernResume = () => {
               >
                 <h2 className="text-2xl font-bold text-black dark:text-white print:text-black mb-6 flex items-center gap-3">
                   <span className="w-2 h-8 bg-gradient-to-b from-black to-neutral-600 dark:from-white dark:to-neutral-400 print:from-black print:to-neutral-600 rounded-full" />
-                  Projecten
+                  {t.resume.projects}
                 </h2>
                 
                 <div className="grid gap-4">
@@ -233,7 +232,7 @@ const ModernResume = () => {
                 transition={{ delay: 0.7 }}
               >
                 <h2 className="text-xl font-bold text-black dark:text-white print:text-black mb-4">
-                  Opleiding
+                  {t.resume.education}
                 </h2>
                 <div className="space-y-6">
                   <div>
@@ -256,7 +255,7 @@ const ModernResume = () => {
                 transition={{ delay: 0.8 }}
               >
                 <h2 className="text-xl font-bold text-black dark:text-white print:text-black mb-4">
-                  Skills
+                  {t.resume.skills}
                 </h2>
                 <div className="space-y-4">
                   <div>
@@ -298,20 +297,20 @@ const ModernResume = () => {
                 transition={{ delay: 0.9 }}
               >
                 <h2 className="text-xl font-bold text-black dark:text-white print:text-black mb-4">
-                  Talen
+                  {t.resume.languages}
                 </h2>
                 <div className="space-y-2 text-sm">
                   <div className="flex justify-between">
-                    <span className="text-neutral-700 dark:text-neutral-300 print:text-neutral-700">Nederlands</span>
-                    <span className="text-neutral-500 dark:text-neutral-500 print:text-neutral-500">Moedertaal</span>
+                    <span className="text-neutral-700 dark:text-neutral-300 print:text-neutral-700">{t.resume.dutch}</span>
+                    <span className="text-neutral-500 dark:text-neutral-500 print:text-neutral-500">{t.resume.native}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-neutral-700 dark:text-neutral-300 print:text-neutral-700">Engels</span>
-                    <span className="text-neutral-500 dark:text-neutral-500 print:text-neutral-500">Conversatie</span>
+                    <span className="text-neutral-700 dark:text-neutral-300 print:text-neutral-700">{t.resume.english}</span>
+                    <span className="text-neutral-500 dark:text-neutral-500 print:text-neutral-500">{t.resume.conversational}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-neutral-700 dark:text-neutral-300 print:text-neutral-700">Frans</span>
-                    <span className="text-neutral-500 dark:text-neutral-500 print:text-neutral-500">Conversatie</span>
+                    <span className="text-neutral-700 dark:text-neutral-300 print:text-neutral-700">{t.resume.french}</span>
+                    <span className="text-neutral-500 dark:text-neutral-500 print:text-neutral-500">{t.resume.conversational}</span>
                   </div>
                 </div>
               </motion.section>

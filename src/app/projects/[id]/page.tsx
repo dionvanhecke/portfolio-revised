@@ -36,7 +36,7 @@ interface Project {
 const ProjectDetail = () => {
   const params = useParams()
   const router = useRouter()
-  const { language } = useLanguage()
+  const { language, t } = useLanguage()
   const [project, setProject] = useState<Project | null>(null)
   const [loading, setLoading] = useState(true)
 
@@ -63,7 +63,7 @@ const ProjectDetail = () => {
   if (loading) {
     return (
       <div className="min-h-screen bg-white dark:bg-black flex items-center justify-center">
-        <div className="text-neutral-500 dark:text-neutral-400">Loading...</div>
+        <div className="text-neutral-500 dark:text-neutral-400">{t.projectDetail.loading}</div>
       </div>
     )
   }
@@ -72,12 +72,12 @@ const ProjectDetail = () => {
     return (
       <div className="min-h-screen bg-white dark:bg-black flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-2xl font-medium text-black dark:text-white mb-4">Project niet gevonden</h1>
+          <h1 className="text-2xl font-medium text-black dark:text-white mb-4">{t.projectDetail.notFound}</h1>
           <button
             onClick={() => router.push('/#projects')}
             className="text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white"
           >
-            Terug naar projecten
+            {t.projectDetail.backToProjects}
           </button>
         </div>
       </div>
@@ -94,7 +94,7 @@ const ProjectDetail = () => {
           className="flex items-center gap-2 text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white mb-12 group cursor-pointer"
         >
           <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
-          <span>Terug naar projecten</span>
+          <span>{t.projectDetail.backToProjects}</span>
         </motion.button>
 
         <motion.div
@@ -124,7 +124,7 @@ const ProjectDetail = () => {
                   className="flex items-center gap-2 px-4 py-2 text-sm bg-black dark:bg-white text-white dark:text-black rounded-full hover:opacity-80 transition-opacity"
                 >
                   <ExternalLink className="w-4 h-4" />
-                  <span>Bekijk live website</span>
+                  <span>{t.projectDetail.viewLive}</span>
                 </a>
               )}
             </div>
@@ -154,7 +154,7 @@ const ProjectDetail = () => {
             transition={{ delay: 0.3 }}
             className="mb-12"
           >
-            <h3 className="text-sm font-medium text-black dark:text-white mb-4">Technologieën</h3>
+            <h3 className="text-sm font-medium text-black dark:text-white mb-4">{t.projectDetail.technologies}</h3>
             <div className="flex flex-wrap gap-2">
               {project.metadata.technologies.map((tech, i) => (
                 <span

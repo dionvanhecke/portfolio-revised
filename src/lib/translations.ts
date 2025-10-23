@@ -189,6 +189,13 @@ export const translations = {
       english: 'Engels',
       french: 'Frans',
     },
+    projectDetail: {
+      backToProjects: 'Terug naar projecten',
+      notFound: 'Project niet gevonden',
+      loading: 'Laden...',
+      technologies: 'Technologieën',
+      viewLive: 'Bekijk live website',
+    },
   },
   fr: {
     nav: {
@@ -362,6 +369,13 @@ export const translations = {
       locationTitle: 'Localisation',
       locationValue: 'Belgique',
       locationDesc: 'Ouvert aux opportunités à distance',
+    },
+    projectDetail: {
+      backToProjects: 'Retour aux projets',
+      notFound: 'Projet introuvable',
+      loading: 'Chargement...',
+      technologies: 'Technologies',
+      viewLive: 'Voir le site en direct',
     },
     resume: {
       backToPortfolio: 'Portfolio',
@@ -553,6 +567,13 @@ export const translations = {
       locationTitle: 'Location',
       locationValue: 'Belgium',
       locationDesc: 'Open to remote opportunities',
+    },
+    projectDetail: {
+      backToProjects: 'Back to projects',
+      notFound: 'Project not found',
+      loading: 'Loading...',
+      technologies: 'Technologies',
+      viewLive: 'View live website',
     },
     resume: {
       backToPortfolio: 'Portfolio',
