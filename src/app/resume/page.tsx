@@ -139,32 +139,32 @@ const ModernResume = () => {
                     <div className="flex justify-between items-start mb-2">
                       <div>
                         <h3 className="text-xl font-semibold text-black dark:text-white print:text-black">
-                          Full Stack Developer
+                          {t.resume.job1Title}
                         </h3>
                         <p className="text-neutral-600 dark:text-neutral-400 print:text-neutral-600 font-medium">
-                          Simcogroup
+                          {t.resume.job1Company}
                         </p>
                       </div>
                       <span className="text-sm text-neutral-500 dark:text-neutral-500 print:text-neutral-500 font-medium">
-                        Sep 2024 - Heden
+                        {t.resume.job1Period}
                       </span>
                     </div>
                     <ul className="space-y-2 text-neutral-700 dark:text-neutral-300 print:text-neutral-700">
                       <li className="flex items-start gap-2">
                         <span className="text-neutral-400 mt-1.5">→</span>
-                        <span>Cross-platform mobile apps voor Android en iOS met Tauri en React</span>
+                        <span>{t.resume.job1Task1}</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="text-neutral-400 mt-1.5">→</span>
-                        <span>NGINX configuratie als webserver en reverse proxy</span>
+                        <span>{t.resume.job1Task2}</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="text-neutral-400 mt-1.5">→</span>
-                        <span>Cloudflare DNS implementatie voor optimale beveiliging</span>
+                        <span>{t.resume.job1Task3}</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="text-neutral-400 mt-1.5">→</span>
-                        <span>Schaalbare webplatformen met Next.js, Laravel en NestJS</span>
+                        <span>{t.resume.job1Task4}</span>
                       </li>
                     </ul>
                   </div>
@@ -174,24 +174,24 @@ const ModernResume = () => {
                     <div className="flex justify-between items-start mb-2">
                       <div>
                         <h3 className="text-xl font-semibold text-black dark:text-white print:text-black">
-                          Software Development Stagiair
+                          {t.resume.job2Title}
                         </h3>
                         <p className="text-neutral-600 dark:text-neutral-400 print:text-neutral-600 font-medium">
-                          Techbirds
+                          {t.resume.job2Company}
                         </p>
                       </div>
                       <span className="text-sm text-neutral-500 dark:text-neutral-500 print:text-neutral-500 font-medium">
-                        Apr - Mei 2024
+                        {t.resume.job2Period}
                       </span>
                     </div>
                     <ul className="space-y-2 text-neutral-700 dark:text-neutral-300 print:text-neutral-700">
                       <li className="flex items-start gap-2">
                         <span className="text-neutral-400 mt-1.5">→</span>
-                        <span>Ontwikkeling met C#, TypeScript en Next.js</span>
+                        <span>{t.resume.job2Task1}</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="text-neutral-400 mt-1.5">→</span>
-                        <span>Scaffolding technieken en CI/CD processen</span>
+                        <span>{t.resume.job2Task2}</span>
                       </li>
                     </ul>
                   </div>
@@ -210,16 +210,16 @@ const ModernResume = () => {
                 
                 <div className="grid gap-4">
                   <div className="p-5 bg-neutral-50 dark:bg-neutral-800/50 print:bg-neutral-50 rounded-2xl border border-neutral-200 dark:border-neutral-700 print:border-neutral-200">
-                    <h3 className="font-semibold text-black dark:text-white print:text-black mb-1">BizzInfra Website</h3>
-                    <p className="text-sm text-neutral-600 dark:text-neutral-400 print:text-neutral-600">Next.js, TypeScript, Tailwind CSS • bizzinfra.be</p>
+                    <h3 className="font-semibold text-black dark:text-white print:text-black mb-1">{t.resume.project1Title}</h3>
+                    <p className="text-sm text-neutral-600 dark:text-neutral-400 print:text-neutral-600">{t.resume.project1Tech}</p>
                   </div>
                   <div className="p-5 bg-neutral-50 dark:bg-neutral-800/50 print:bg-neutral-50 rounded-2xl border border-neutral-200 dark:border-neutral-700 print:border-neutral-200">
-                    <h3 className="font-semibold text-black dark:text-white print:text-black mb-1">Cross-Platform Mobile Apps</h3>
-                    <p className="text-sm text-neutral-600 dark:text-neutral-400 print:text-neutral-600">Tauri, React • Android, iOS, Windows, macOS</p>
+                    <h3 className="font-semibold text-black dark:text-white print:text-black mb-1">{t.resume.project2Title}</h3>
+                    <p className="text-sm text-neutral-600 dark:text-neutral-400 print:text-neutral-600">{t.resume.project2Tech}</p>
                   </div>
                   <div className="p-5 bg-neutral-50 dark:bg-neutral-800/50 print:bg-neutral-50 rounded-2xl border border-neutral-200 dark:border-neutral-700 print:border-neutral-200">
-                    <h3 className="font-semibold text-black dark:text-white print:text-black mb-1">Web Platform Infrastructure</h3>
-                    <p className="text-sm text-neutral-600 dark:text-neutral-400 print:text-neutral-600">Next.js, Laravel, NestJS, NGINX, Cloudflare</p>
+                    <h3 className="font-semibold text-black dark:text-white print:text-black mb-1">{t.resume.project3Title}</h3>
+                    <p className="text-sm text-neutral-600 dark:text-neutral-400 print:text-neutral-600">{t.resume.project3Tech}</p>
                   </div>
                 </div>
               </motion.section>
@@ -236,15 +236,15 @@ const ModernResume = () => {
                 </h2>
                 <div className="space-y-6">
                   <div>
-                    <h3 className="font-semibold text-black dark:text-white print:text-black">Graduaat Programmeren</h3>
-                    <p className="text-sm text-neutral-600 dark:text-neutral-400 print:text-neutral-600">Artevelde Hogeschool</p>
-                    <p className="text-xs text-neutral-500 dark:text-neutral-500 print:text-neutral-500 mt-1">2021 - 2024</p>
+                    <h3 className="font-semibold text-black dark:text-white print:text-black">{t.resume.edu1Title}</h3>
+                    <p className="text-sm text-neutral-600 dark:text-neutral-400 print:text-neutral-600">{t.resume.edu1School}</p>
+                    <p className="text-xs text-neutral-500 dark:text-neutral-500 print:text-neutral-500 mt-1">{t.resume.edu1Period}</p>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-black dark:text-white print:text-black">Kantoor</h3>
-                    <p className="text-sm text-neutral-600 dark:text-neutral-400 print:text-neutral-600">Het Spectrum</p>
-                    <p className="text-xs text-neutral-500 dark:text-neutral-500 print:text-neutral-500 mt-1">2014 - 2021</p>
-                    <p className="text-xs text-neutral-700 dark:text-neutral-300 print:text-neutral-700 mt-2">🏆 Stage-award</p>
+                    <h3 className="font-semibold text-black dark:text-white print:text-black">{t.resume.edu2Title}</h3>
+                    <p className="text-sm text-neutral-600 dark:text-neutral-400 print:text-neutral-600">{t.resume.edu2School}</p>
+                    <p className="text-xs text-neutral-500 dark:text-neutral-500 print:text-neutral-500 mt-1">{t.resume.edu2Period}</p>
+                    <p className="text-xs text-neutral-700 dark:text-neutral-300 print:text-neutral-700 mt-2">{t.resume.edu2Award}</p>
                   </div>
                 </div>
               </motion.section>
