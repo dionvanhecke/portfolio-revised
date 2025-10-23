@@ -6,7 +6,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 const ModernResume = () => {
-  const { t, language } = useLanguage()
+  const { } = useLanguage()
 
   const handleDownloadPDF = () => {
     window.print()

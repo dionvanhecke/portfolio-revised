@@ -58,15 +58,6 @@ const Experience = () => {
     }
   ]
 
-  const getColorClasses = (color: string) => {
-    const colors = {
-      blue: 'bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 border-blue-200 dark:border-blue-700',
-      green: 'bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-200 border-green-200 dark:border-green-700',
-      purple: 'bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-200 border-purple-200 dark:border-purple-700',
-      amber: 'bg-amber-100 dark:bg-amber-900/30 text-amber-800 dark:text-amber-200 border-amber-200 dark:border-amber-700'
-    }
-    return colors[color as keyof typeof colors] || colors.blue
-  }
 
   return (
     <section id="experience" className="py-32 bg-white dark:bg-black border-t border-neutral-200 dark:border-neutral-800">
