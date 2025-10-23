@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { Award, Code, Heart, Zap, Rocket, Palette } from 'lucide-react'
+import { Award,  Zap, Rocket, Palette } from 'lucide-react'
 import { useLanguage } from '@/context/LanguageContext'
 
 const About = () => {
@@ -21,13 +21,14 @@ const About = () => {
     ],
     tools: [
       'Git', 'Docker', 'NGINX', 'Cloudflare', 'Tauri', 'Laravel'
-    ],
-    languages_spoken: [
-      { name: 'Dutch', level: 'Native' },
-      { name: 'English', level: 'Conversational' },
-      { name: 'French', level: 'Conversational' }
     ]
   }
+
+  const languages_spoken = [
+    { name: t.resume.dutch, level: t.resume.native },
+    { name: t.resume.english, level: t.resume.conversational },
+    { name: t.resume.french, level: t.resume.conversational }
+  ]
 
   const highlights = [
     {
@@ -182,7 +183,7 @@ const About = () => {
                 {t.about.spokenLanguages}
               </h4>
               <div className="space-y-3">
-                {skills.languages_spoken.map((lang, index) => (
+                {languages_spoken.map((lang, index) => (
                   <motion.div
                     key={lang.name}
                     initial={{ opacity: 0, x: -10 }}

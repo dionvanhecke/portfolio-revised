@@ -20,7 +20,7 @@ technologies:
   - Cloudflare
 ---
 
-# Webplatform Infrastructuur
+# nl
 
 ## Overzicht
 
@@ -65,3 +65,99 @@ Het configureren van NGINX als reverse proxy voor verschillende applicaties vere
 ## Resultaat
 
 Een robuuste, schaalbare infrastructuur die meerdere applicaties ondersteunt met uitstekende prestaties en beveiliging.
+
+---
+
+# fr
+
+## Aperçu
+
+Construit des plateformes web évolutives avec Next.js, Laravel et NestJS, incluant une configuration NGINX complète et une intégration Cloudflare pour une sécurité et des performances optimales.
+
+## Fonctionnalités Principales
+
+- **Serveur Web NGINX**: Configuration pour les applications Laravel
+- **Proxy Inverse**: Configuration pour les applications Next.js
+- **Intégration Cloudflare**: Optimisation DNS et sécurité
+- **Architecture Évolutive**: Conçue pour la croissance et la charge élevée
+
+## Détails Techniques
+
+Le projet comprenait la mise en place d'une infrastructure web complète avec différentes technologies:
+
+### Stack Backend
+
+- **Laravel**: Pour les endpoints API et la logique côté serveur
+- **NestJS**: Pour l'architecture microservices
+- **NGINX**: Comme serveur web et proxy inverse
+
+### Stack Frontend
+
+- **Next.js**: Pour le rendu côté serveur et des performances optimales
+- **React**: Pour des composants UI interactifs
+
+### DevOps & Sécurité
+
+- **Cloudflare**: Pour la gestion DNS, la protection DDoS et le CDN
+- **SSL/TLS**: Chiffrement complet avec certificats automatiques
+- **Load Balancing**: Pour une distribution optimale du trafic
+
+## Défis & Solutions
+
+La configuration de NGINX comme proxy inverse pour différentes applications nécessitait une planification minutieuse:
+
+1. **Gestion des Ports**: Différentes applications sur différents ports
+2. **Terminaison SSL**: Gestion centralisée des certificats SSL
+3. **Stratégie de Cache**: Cache optimal pour le contenu statique et dynamique
+
+## Résultat
+
+Une infrastructure robuste et évolutive qui prend en charge plusieurs applications avec d'excellentes performances et sécurité.
+
+---
+
+# en
+
+## Overview
+
+Built scalable web platforms using Next.js, Laravel, and NestJS, including complete NGINX configuration and Cloudflare integration for optimal security and performance.
+
+## Key Features
+
+- **NGINX Webserver**: Configuration for Laravel applications
+- **Reverse Proxy**: Setup for Next.js applications
+- **Cloudflare Integration**: DNS and security optimization
+- **Scalable Architecture**: Designed for growth and high load
+
+## Technical Details
+
+The project involved setting up a complete web infrastructure with various technologies:
+
+### Backend Stack
+
+- **Laravel**: For API endpoints and server-side logic
+- **NestJS**: For microservices architecture
+- **NGINX**: As webserver and reverse proxy
+
+### Frontend Stack
+
+- **Next.js**: For server-side rendering and optimal performance
+- **React**: For interactive UI components
+
+### DevOps & Security
+
+- **Cloudflare**: For DNS management, DDoS protection, and CDN
+- **SSL/TLS**: Complete encryption with automatic certificates
+- **Load Balancing**: For optimal traffic distribution
+
+## Challenges & Solutions
+
+Configuring NGINX as a reverse proxy for different applications required careful planning:
+
+1. **Port Management**: Different applications on different ports
+2. **SSL Termination**: Centralized management of SSL certificates
+3. **Caching Strategy**: Optimal caching for static and dynamic content
+
+## Result
+
+A robust, scalable infrastructure that supports multiple applications with excellent performance and security.

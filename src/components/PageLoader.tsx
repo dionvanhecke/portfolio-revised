@@ -8,18 +8,15 @@ const PageLoader = () => {
   const [progress, setProgress] = useState(0)
 
   useEffect(() => {
-    // Check if we should show the loader
     if (typeof window === 'undefined') return
     
     const hasVisited = sessionStorage.getItem('hasVisited')
     const isHomePage = window.location.pathname === '/'
     
-    // Only show loader on first visit to homepage
     if (!hasVisited && isHomePage) {
       setIsLoading(true)
       sessionStorage.setItem('hasVisited', 'true')
       
-      // Progress animation
       const progressInterval = setInterval(() => {
         setProgress(prev => {
           if (prev >= 100) {
@@ -30,7 +27,6 @@ const PageLoader = () => {
         })
       }, 30)
 
-      // Hide loader after animation
       const timer = setTimeout(() => {
         setIsLoading(false)
       }, 2200)
@@ -43,7 +39,6 @@ const PageLoader = () => {
   }, [])
 
   useEffect(() => {
-    // Manage body scroll
     if (isLoading) {
       document.body.style.overflow = 'hidden'
       document.body.style.position = 'fixed'
@@ -56,7 +51,6 @@ const PageLoader = () => {
       document.body.style.height = ''
     }
 
-    // Cleanup on unmount
     return () => {
       document.body.style.overflow = ''
       document.body.style.position = ''

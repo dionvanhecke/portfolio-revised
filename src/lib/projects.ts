@@ -43,10 +43,8 @@ export function getAllProjectIds(): string[] {
 
 export function getProjectData(id: string, language: 'nl' | 'fr' | 'en' = 'nl'): Project | null {
   try {
-    // Try to load language-specific file first (e.g., project.nl.md)
     let fullPath = path.join(projectsDirectory, `${id}.${language}.md`)
     
-    // If language-specific file doesn't exist, fall back to default .md file
     if (!fs.existsSync(fullPath)) {
       fullPath = path.join(projectsDirectory, `${id}.md`)
     }
@@ -54,14 +52,45 @@ export function getProjectData(id: string, language: 'nl' | 'fr' | 'en' = 'nl'):
     const fileContents = fs.readFileSync(fullPath, 'utf8')
     const { data, content } = matter(fileContents)
 
+    const languageContent = extractLanguageContent(content, language)
+
     return {
       metadata: data as ProjectMetadata,
-      content
+      content: languageContent
     }
   } catch (error) {
     console.error(`Error reading project ${id}:`, error)
     return null
   }
+}
+
+function extractLanguageContent(content: string, language: 'nl' | 'fr' | 'en'): string {
+  const languageHeaders = ['# nl', '# fr', '# en']
+  
+  const langHeader = `# ${language}`
+  const startIndex = content.indexOf(langHeader)
+  
+  if (startIndex === -1) {
+    return content
+  }
+  
+  let endIndex = content.length
+  for (const header of languageHeaders) {
+    if (header !== langHeader) {
+      const nextIndex = content.indexOf(header, startIndex + langHeader.length)
+      if (nextIndex !== -1 && nextIndex < endIndex) {
+        endIndex = nextIndex
+      }
+    }
+  }
+  
+  let extracted = content.substring(startIndex + langHeader.length, endIndex).trim()
+  
+  if (extracted.endsWith('---')) {
+    extracted = extracted.substring(0, extracted.lastIndexOf('---')).trim()
+  }
+  
+  return extracted
 }
 
 export function getAllProjects(): Project[] {

@@ -2,7 +2,6 @@
 
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { Calendar, MapPin, Award, Briefcase } from 'lucide-react'
 import { useLanguage } from '@/context/LanguageContext'
 
 const Experience = () => {

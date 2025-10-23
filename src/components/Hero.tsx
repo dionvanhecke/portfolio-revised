@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ArrowDown, Github, Linkedin } from 'lucide-react'
+import { ArrowDown } from 'lucide-react'
 import { useLanguage } from '@/context/LanguageContext'
 
 const Hero = () => {

@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { Mail, Linkedin, Github, MapPin, Send, MessageCircle } from 'lucide-react'
+import { Mail, Linkedin, Github, MapPin} from 'lucide-react'
 import { useLanguage } from '@/context/LanguageContext'
 
 const Contact = () => {
