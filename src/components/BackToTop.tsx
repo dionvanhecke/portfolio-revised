@@ -8,22 +8,16 @@ const BackToTop = () => {
   const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
-    let timeoutId: NodeJS.Timeout
-
     const toggleVisibility = () => {
-      clearTimeout(timeoutId)
-      timeoutId = setTimeout(() => {
-        if (window.pageYOffset > 300) {
-          setIsVisible(true)
-        } else {
-          setIsVisible(false)
-        }
-      }, 100)
+      const shouldShow = window.pageYOffset > 300
+      setIsVisible(shouldShow)
     }
+
+    // Initial check
+    toggleVisibility()
 
     window.addEventListener('scroll', toggleVisibility, { passive: true })
     return () => {
-      clearTimeout(timeoutId)
       window.removeEventListener('scroll', toggleVisibility)
     }
   }, [])
