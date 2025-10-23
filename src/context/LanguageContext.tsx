@@ -18,7 +18,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     setMounted(true)
     const saved = localStorage.getItem('language')
-    if (saved) {
+    if (saved && (saved === 'nl' || saved === 'fr' || saved === 'en')) {
       setLanguage(saved as Language)
     }
   }, [])
@@ -33,6 +33,15 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     language,
     setLanguage,
     t: translations[language],
+  }
+
+  // Prevent hydration mismatch by not rendering until mounted
+  if (!mounted) {
+    return (
+      <LanguageContext.Provider value={value}>
+        {children}
+      </LanguageContext.Provider>
+    )
   }
 
   return (
