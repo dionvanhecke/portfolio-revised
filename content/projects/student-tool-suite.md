@@ -13,9 +13,9 @@ status:
   en: Award Winner
 image: /award.png
 technologies:
-  - JavaScript
-  - HTML/CSS
+  - C++
   - Problem Solving
+  - Desktop Applications
 ---
 
 # nl
@@ -37,13 +37,13 @@ Tijdens mijn studie aan Het Spectrum merkte ik dat veel studenten tijdens hun st
 
 ## Technische Details
 
-De tools werden gebouwd met simpele maar effectieve technologieën:
+De tools werden gebouwd als native desktop applicaties met C++:
 
-### Frontend
+### Technologie
 
-- **HTML/CSS**: Voor de gebruikersinterface
-- **JavaScript**: Voor interactiviteit en logica
-- **Responsive Design**: Werkt op alle apparaten
+- **C++**: Voor performante en efficiënte desktop applicaties
+- **Native UI**: Snelle en responsieve gebruikersinterface
+- **Cross-platform**: Werkt op verschillende Windows versies
 
 ### Functionaliteit
 
@@ -95,13 +95,13 @@ Pendant mes études à Het Spectrum, j'ai remarqué que de nombreux étudiants r
 
 ## Détails Techniques
 
-Les outils ont été construits avec des technologies simples mais efficaces:
+Les outils ont été construits comme des applications de bureau natives avec C++:
 
-### Frontend
+### Technologie
 
-- **HTML/CSS**: Pour l'interface utilisateur
-- **JavaScript**: Pour l'interactivité et la logique
-- **Design Responsive**: Fonctionne sur tous les appareils
+- **C++**: Pour des applications de bureau performantes et efficaces
+- **UI Native**: Interface utilisateur rapide et réactive
+- **Multiplateforme**: Fonctionne sur différentes versions de Windows
 
 ### Fonctionnalité
 
@@ -153,13 +153,13 @@ During my studies at Het Spectrum, I noticed that many students encountered the 
 
 ## Technical Details
 
-The tools were built with simple but effective technologies:
+The tools were built as native desktop applications with C++:
 
-### Frontend
+### Technology
 
-- **HTML/CSS**: For the user interface
-- **JavaScript**: For interactivity and logic
-- **Responsive Design**: Works on all devices
+- **C++**: For performant and efficient desktop applications
+- **Native UI**: Fast and responsive user interface
+- **Cross-platform**: Works on different Windows versions
 
 ### Functionality
 
