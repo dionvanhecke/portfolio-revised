@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { Award,  Zap, Rocket, Palette } from 'lucide-react'
+import { Award, Zap, Rocket, Palette, Code2, Layers, Database, Wrench, TestTube, Paintbrush } from 'lucide-react'
 import { useLanguage } from '@/context/LanguageContext'
 
 const About = () => {
@@ -14,15 +14,33 @@ const About = () => {
 
   const skills = {
     languages: [
-      'TypeScript', 'JavaScript', 'PHP', 'C++', 'C#', 'SQL', 'HTML', 'CSS', 'SCSS'
+      'TypeScript', 'JavaScript', 'PHP', 'C#', 'SQL', 'HTML', 'CSS', 'C++'
     ],
     frameworks: [
-      'Next.js', 'React', 'NestJS', 'Remix', 'Svelte', 'Vue', 'CodeIgniter'
+      'Next.js', 'React', 'Laravel', 'NestJS', 'Tailwind CSS', 'Svelte', 'Vue'
+    ],
+    databases: [
+      'MySQL', 'PostgreSQL', 'MongoDB', 'Redis', 'SQLite'
     ],
     tools: [
-      'Git', 'Docker', 'NGINX', 'Cloudflare', 'Tauri', 'Laravel'
+      'Git', 'Docker', 'NGINX', 'Cloudflare', 'Coolify', 'Tauri'
+    ],
+    testing: [
+      'Jest', 'Vitest', 'Cypress', 'PHPUnit', 'Playwright'
+    ],
+    design: [
+      'Figma', 'Adobe XD', 'Photoshop', 'Illustrator'
     ]
   }
+
+  const skillCategories = [
+    { title: t.about.languages, icon: Code2, items: skills.languages },
+    { title: t.about.frameworks, icon: Layers, items: skills.frameworks },
+    { title: 'Databases', icon: Database, items: skills.databases },
+    { title: t.about.tools, icon: Wrench, items: skills.tools },
+    { title: 'Testing', icon: TestTube, items: skills.testing },
+    { title: 'Design', icon: Paintbrush, items: skills.design }
+  ]
 
   const languages_spoken = [
     { name: t.resume.dutch, level: t.resume.native },
@@ -121,61 +139,38 @@ const About = () => {
               {t.about.skills}
             </h3>
 
-            <div>
-              <h4 className="text-sm font-medium text-black dark:text-white mb-4">
-                {t.about.languages}
-              </h4>
-              <div className="flex flex-wrap gap-2">
-                {skills.languages.map((skill, index) => (
-                  <motion.span
-                    key={skill}
-                    initial={{ opacity: 0, y: 10 }}
+            <div className="grid grid-cols-2 gap-8">
+              {skillCategories.map((category, index) => {
+                const IconComponent = category.icon
+                return (
+                  <motion.div
+                    key={category.title}
+                    initial={{ opacity: 0, y: 20 }}
                     animate={inView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ duration: 0.5, delay: index * 0.05, ease: [0.16, 1, 0.3, 1] }}
-                    className="px-3 py-1.5 text-sm text-neutral-600 dark:text-neutral-400 border border-neutral-200 dark:border-neutral-800 rounded-md font-light"
+                    transition={{ duration: 0.6, delay: index * 0.1, ease: [0.16, 1, 0.3, 1] }}
                   >
-                    {skill}
-                  </motion.span>
-                ))}
-              </div>
-            </div>
-
-            <div>
-              <h4 className="text-sm font-medium text-black dark:text-white mb-4">
-                {t.about.frameworks}
-              </h4>
-              <div className="flex flex-wrap gap-2">
-                {skills.frameworks.map((skill, index) => (
-                  <motion.span
-                    key={skill}
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={inView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ duration: 0.5, delay: index * 0.05, ease: [0.16, 1, 0.3, 1] }}
-                    className="px-3 py-1.5 text-sm text-neutral-600 dark:text-neutral-400 border border-neutral-200 dark:border-neutral-800 rounded-md font-light"
-                  >
-                    {skill}
-                  </motion.span>
-                ))}
-              </div>
-            </div>
-
-            <div>
-              <h4 className="text-sm font-medium text-black dark:text-white mb-4">
-                {t.about.tools}
-              </h4>
-              <div className="flex flex-wrap gap-2">
-                {skills.tools.map((skill, index) => (
-                  <motion.span
-                    key={skill}
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={inView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ duration: 0.5, delay: index * 0.05, ease: [0.16, 1, 0.3, 1] }}
-                    className="px-3 py-1.5 text-sm text-neutral-600 dark:text-neutral-400 border border-neutral-200 dark:border-neutral-800 rounded-md font-light"
-                  >
-                    {skill}
-                  </motion.span>
-                ))}
-              </div>
+                    <div className="flex items-center gap-3 mb-4">
+                      <IconComponent className="w-5 h-5 text-black dark:text-white" />
+                      <h4 className="text-sm font-medium text-black dark:text-white">
+                        {category.title}
+                      </h4>
+                    </div>
+                    <div className="flex flex-wrap gap-2">
+                      {category.items.map((skill, skillIndex) => (
+                        <motion.span
+                          key={skill}
+                          initial={{ opacity: 0, scale: 0.8 }}
+                          animate={inView ? { opacity: 1, scale: 1 } : {}}
+                          transition={{ duration: 0.4, delay: (index * 0.1) + (skillIndex * 0.05), ease: [0.16, 1, 0.3, 1] }}
+                          className="px-3 py-1.5 text-sm text-neutral-600 dark:text-neutral-400 border border-neutral-200 dark:border-neutral-800 rounded-md font-light hover:border-black dark:hover:border-white hover:text-black dark:hover:text-white transition-colors"
+                        >
+                          {skill}
+                        </motion.span>
+                      ))}
+                    </div>
+                  </motion.div>
+                )
+              })}
             </div>
 
             <div>
