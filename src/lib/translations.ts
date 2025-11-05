@@ -75,9 +75,9 @@ export const translations = {
           type: 'Opleiding',
           description: 'Uitgebreide programmeeropleiding gericht op moderne webontwikkeling.',
           achievements: [
-            'Afgestudeerd met sterke basis in programmeerprincipes',
-            'Gespecialiseerd in webontwikkelingstechnologieën',
-            'Voltooide verschillende projecten met moderne frameworks',
+            'Afgestudeerd met sterke basis in TypeScript, NestJS en moderne frameworks',
+            'Gespecialiseerd in Remix, Laravel en CraftCMS',
+            'Voltooide verschillende projecten met moderne webontwikkelingstechnologieën',
             'Ontwikkelde probleemoplossend en analytisch denkvermogen'
           ]
         },

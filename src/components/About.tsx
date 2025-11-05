@@ -17,7 +17,7 @@ const About = () => {
       'TypeScript', 'JavaScript', 'PHP', 'C#', 'SQL', 'HTML', 'CSS', 'C++'
     ],
     frameworks: [
-      'Next.js', 'React', 'Laravel', 'NestJS', 'Tailwind CSS', 'Svelte', 'Vue'
+      'Next.js', 'React', 'Laravel', 'NestJS', 'Remix', 'Tailwind CSS', 'CraftCMS', "Vue.js", "Svelte", "AuthJS", "BetterAuth", "Framer Motion", "NextAuth.js"
     ],
     databases: [
       'MySQL', 'PostgreSQL', 'MongoDB', 'Redis', 'SQLite'
