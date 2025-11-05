@@ -16,12 +16,9 @@ const Hero = () => {
   const rotateX = useTransform(mouseY, [-300, 300], [5, -5])
   const rotateY = useTransform(mouseX, [-300, 300], [-5, 5])
 
-  // Auto-demo animation on load
   useEffect(() => {
     const demoAnimation = async () => {
-      await new Promise(resolve => setTimeout(resolve, 1500)) // Wait for initial load
-      
-      // Simulate mouse movement in a smooth pattern
+      await new Promise(resolve => setTimeout(resolve, 1500)) 
       await animate(mouseX, 150, { duration: 0.8, ease: "easeInOut" })
       await animate(mouseY, -100, { duration: 0.8, ease: "easeInOut" })
       await animate(mouseX, -150, { duration: 0.8, ease: "easeInOut" })
@@ -49,7 +46,6 @@ const Hero = () => {
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center bg-white dark:bg-black overflow-hidden">
-      {/* Animated background gradient */}
       <motion.div
         className="absolute inset-0 opacity-30 dark:opacity-20"
         animate={{
@@ -127,7 +123,6 @@ const Hero = () => {
               ))}
             </motion.h1>
             
-            {/* Floating elements around name */}
             <motion.div
               className="absolute -left-8 top-1/4 w-2 h-2 rounded-full bg-black dark:bg-white"
               animate={{
