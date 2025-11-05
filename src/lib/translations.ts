@@ -153,7 +153,7 @@ export const translations = {
     },
     contact: {
       title: 'Neem Contact Op',
-      intro: 'Klaar om je volgende project te starten? Ik hoor graag over je ideeën en bespreek hoe we samen kunnen werken om ze tot leven te brengen.',
+      intro: 'Interesse in een gesprek? Ik sta altijd open voor nieuwe kansen en uitdagingen. Laten we connecten.',
       name: 'Je naam',
       email: 'Je email',
       subject: 'Onderwerp',
