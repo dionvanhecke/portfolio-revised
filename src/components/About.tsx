@@ -29,7 +29,7 @@ const About = () => {
       'Jest', 'Vitest', 'Cypress', 'PHPUnit', 'Playwright'
     ],
     design: [
-      'Figma', 'Adobe XD', 'Photoshop', 'Illustrator'
+      'Figma', 'Adobe XD'
     ]
   }
 
