@@ -63,6 +63,24 @@ const Projects = () => {
       icon: <Globe className="w-6 h-6" />
     },
     {
+      id: 'devakschilder',
+      title: 'De Vakschilder Website',
+      category: 'web',
+      description: 'Ontwikkelde een moderne website voor De Vakschilder, een professionele schilder actief in Erembodegem, Aalst, Dendermonde en Ninove met focus op diensten presentatie.',
+      image: '/devakschilder.png',
+      technologies: ['Next.js', 'Tailwind CSS', 'Framer Motion', 'TypeScript'],
+      features: [
+        'Modern design met vloeiende animaties',
+        'Duidelijke presentatie van schilderwerk, pleisterwerken en gyproc',
+        'Responsive design voor alle apparaten',
+        'Lokale SEO voor Oost-Vlaanderen'
+      ],
+      company: 'De Vakschilder',
+      year: '2025',
+      status: 'Professioneel',
+      icon: <Globe className="w-6 h-6" />
+    },
+    {
       id: 'modern-web-applications',
       title: t.projects.items.modernWeb.title,
       category: 'web',
