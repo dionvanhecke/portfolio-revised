@@ -159,7 +159,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-            className="flex gap-6 items-center"
+            className="flex gap-6 items-center flex-wrap"
           >
             <motion.button
               whileHover={{ x: 4 }}
@@ -176,6 +176,15 @@ const Hero = () => {
             </motion.button>
 
             <span className="text-neutral-300 dark:text-neutral-700">|</span>
+
+            <Link href="/game">
+              <motion.span
+                whileHover={{ x: 4 }}
+                className="text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors cursor-pointer inline-block"
+              >
+                Profile Quiz
+              </motion.span>
+            </Link>
 
             <Link href="/resume">
               <motion.span
