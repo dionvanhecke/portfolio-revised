@@ -14,10 +14,10 @@ const About = () => {
 
   const skills = {
     languages: [
-      'TypeScript', 'JavaScript', 'PHP', 'C#', 'SQL', 'HTML', 'CSS', 'C++'
+      'TypeScript', 'JavaScript', 'PHP', 'C#', 'SQL', 'HTML5', 'CSS3', 'C++'
     ],
     frameworks: [
-      'Next.js', 'React', 'Laravel', 'NestJS', 'Remix', 'Tailwind CSS', 'CraftCMS', "Vue.js", "Svelte", "AuthJS", "BetterAuth", "Framer Motion", "NextAuth.js"
+      'Next.js', 'React', 'Laravel', 'NestJS', 'Remix', 'Tailwind CSS', 'Bootstrap', 'CraftCMS', "Vue.js", "Svelte", "AuthJS", "BetterAuth", "Framer Motion", "NextAuth.js", "jQuery", "SASS"
     ],
     databases: [
       'MySQL', 'PostgreSQL', 'MongoDB', 'Redis', 'SQLite'
