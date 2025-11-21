@@ -19,6 +19,42 @@ const Projects = () => {
 
   const projects = [
     {
+      id: 'parapluu-api',
+      title: 'Parapluu Rest API',
+      category: 'web',
+      description: 'Ontwikkelde een robuuste REST API voor Parapluu met Laravel. De API biedt een complete backend oplossing met authenticatie, data management en veilige endpoints.',
+      image: '/parapluu.webp',
+      technologies: ['Laravel', 'PHP', 'REST API', 'MySQL', 'JWT Authentication', 'Coolify'],
+      features: [
+        'RESTful Architecture met goed gestructureerde endpoints',
+        'JWT Authentication voor veilige authenticatie',
+        'Complete CRUD operaties en data validatie',
+        'Rate limiting en role-based access control'
+      ],
+      company: 'Parapluu',
+      year: '2025',
+      status: 'Professioneel',
+      icon: <Database className="w-6 h-6" />
+    },
+    {
+      id: 'coolify-deployment',
+      title: 'Coolify Self-Hosted Deployment',
+      category: 'tools',
+      description: 'Implementeerde Coolify als self-hosted deployment platform voor automatische deployments. Open-source alternatief voor Heroku met volledige controle over infrastructuur.',
+      image: '/coolify.png',
+      technologies: ['Coolify', 'Docker', 'Self-Hosting', 'CI/CD', 'Linux'],
+      features: [
+        'Self-hosted platform met volledige controle',
+        'Automatische deployments via Git integration',
+        'Docker containers voor consistente deployments',
+        'SSL certificaten en database management'
+      ],
+      company: 'Simcogroup',
+      year: '2025',
+      status: 'Professioneel',
+      icon: <Code className="w-6 h-6" />
+    },
+    {
       id: 'cross-platform-apps',
       title: t.projects.items.crossPlatform.title,
       category: 'mobile',
@@ -80,6 +116,7 @@ const Projects = () => {
       status: 'Professioneel',
       icon: <Globe className="w-6 h-6" />
     },
+   
     {
       id: 'modern-web-applications',
       title: t.projects.items.modernWeb.title,
