@@ -51,14 +51,14 @@ export const translations = {
           period: 'September 2024 - Heden',
           location: 'België',
           type: 'Fulltime',
-          description: 'Ontwikkelen van geavanceerde applicaties en webplatformen met moderne technologieën.',
+          description: 'Ontwikkelen van geavanceerde applicaties en webplatforms met moderne technologieën.',
           achievements: [
             'Ontwikkelde cross-platform mobiele apps voor Android en iOS met Tauri en React',
             'Focus op gebruiksvriendelijke designs met duidelijke typografie en intuïtieve interfaces',
             'Configureerde NGINX als webserver voor Laravel applicaties',
             'Implementeerde NGINX als reverse proxy voor Next.js applicaties',
             'Configureerde Cloudflare als DNS provider voor optimale beveiliging en prestaties',
-            'Bouwde schaalbare webplatformen met Next.js, Laravel en NestJS'
+            'Bouwde schaalbare webplatforms met Next.js, Laravel en NestJS'
           ]
         },
         techbirds: {
@@ -125,7 +125,7 @@ export const translations = {
         },
         webPlatform: {
           title: 'Webplatform Infrastructuur',
-          description: 'Bouwde schaalbare webplatformen met Next.js, Laravel en NestJS met NGINX configuratie en Cloudflare integratie.',
+          description: 'Bouwde schaalbare webplatforms met Next.js, Laravel en NestJS met NGINX configuratie en Cloudflare integratie.',
           features: [
             'NGINX webserver configuratie voor Laravel',
             'Reverse proxy setup voor Next.js',
@@ -201,7 +201,7 @@ export const translations = {
       job1Task1: 'Cross-platform mobile apps voor Android en iOS met Tauri en React',
       job1Task2: 'NGINX configuratie als webserver en reverse proxy',
       job1Task3: 'Cloudflare DNS implementatie voor optimale beveiliging',
-      job1Task4: 'Schaalbare webplatformen met Next.js, Laravel en NestJS',
+      job1Task4: 'Schaalbare webplatforms met Next.js, Laravel en NestJS',
       job2Title: 'Software Development Stagiair',
       job2Company: 'Techbirds',
       job2Period: 'Apr - Mei 2024',
@@ -263,6 +263,13 @@ export const translations = {
       highlight3Desc: 'Expertise frontend et backend',
       highlight4Title: 'Tech Moderne',
       highlight4Desc: 'Toujours à jour avec les tendances',
+      personality: 'Personnalité',
+      trait1: 'Curieux',
+      trait2: 'Créatif',
+      trait3: 'Déterminé',
+      trait4: 'Esprit d\'équipe',
+      trait5: 'Enthousiaste',
+      trait6: 'Organisé',
     },
     experience: {
       title: 'Expérience',
@@ -362,7 +369,7 @@ export const translations = {
           description: 'Développé des applications avec C#, TypeScript et Next.js en mettant l\'accent sur les pratiques de développement modernes et CI/CD.',
           features: [
             'Techniques de scaffolding modernes',
-            'Pipelines CI/CD automatisés',
+            'Pipelines CI/CD automatisées',
             'Architecture de code propre',
             'Flux de travail de collaboration en équipe'
           ],
@@ -486,6 +493,13 @@ export const translations = {
       highlight3Desc: 'Frontend and backend expertise',
       highlight4Title: 'Modern Tech',
       highlight4Desc: 'Always up-to-date with trends',
+      personality: 'Personality',
+      trait1: 'Eager to Learn',
+      trait2: 'Creative',
+      trait3: 'Goal-Oriented',
+      trait4: 'Team Player',
+      trait5: 'Enthusiastic',
+      trait6: 'Structured',
     },
     experience: {
       title: 'Experience',
