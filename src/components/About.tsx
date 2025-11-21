@@ -127,6 +127,31 @@ const About = () => {
                 </motion.div>
               ))}
             </div>
+
+            {/* Personality Traits */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+              className="mt-12"
+            >
+              <h3 className="text-sm tracking-wider uppercase text-neutral-500 dark:text-neutral-400 mb-6 select-none">
+                {t.about.personality}
+              </h3>
+              <div className="flex flex-wrap gap-3">
+                {[t.about.trait1, t.about.trait2, t.about.trait3, t.about.trait4, t.about.trait5, t.about.trait6].map((trait, index) => (
+                  <motion.span
+                    key={index}
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={inView ? { opacity: 1, scale: 1 } : {}}
+                    transition={{ duration: 0.4, delay: 0.4 + index * 0.05, ease: [0.16, 1, 0.3, 1] }}
+                    className="px-4 py-2 bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 rounded-lg text-sm font-medium hover:bg-neutral-200 dark:hover:bg-neutral-700 transition-colors"
+                  >
+                    {trait}
+                  </motion.span>
+                ))}
+              </div>
+            </motion.div>
           </motion.div>
 
           <motion.div

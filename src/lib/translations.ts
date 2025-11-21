@@ -33,6 +33,13 @@ export const translations = {
       highlight3Desc: 'Frontend en backend expertise',
       highlight4Title: 'Modern Tech',
       highlight4Desc: 'Altijd up-to-date met trends',
+      personality: 'Persoonlijkheid',
+      trait1: 'Leergierig',
+      trait2: 'Creatief',
+      trait3: 'Doelgericht',
+      trait4: 'Teamplayer',
+      trait5: 'Enthousiast',
+      trait6: 'Gestructureerd',
     },
     experience: {
       title: 'Ervaring',
